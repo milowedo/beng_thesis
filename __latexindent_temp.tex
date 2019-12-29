@@ -1,6 +1,18 @@
-\chapter{Przykłady elementów pracy dyplomowej}
+\chapter{Projekt aplikacji}
 
-\section{Liczba}
+\section{Architektura}
+
+Architektura aplikacji jest złożona z części mobilnej oraz czterech serwisów, z czego każdy występuje
+jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. 
+Warstwa prezentacyjna porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi swobodne przeglądanie
+wyników
+W ten sposób każda składowa część aplikacji może być niezależnie zarządzana 
+
+HTTP, czyli \texttt{Hypertext Transfer Protocol}
+
+
+
+
 
 Pakiet \texttt{siunitx} zadba o to, by liczba została poprawnie sformatowana: \\
 \begin{center}
@@ -55,8 +67,6 @@ Pakiet \texttt{threeparttable} umożliwia dodanie do tabeli adnotacji: \\
 		
 	\end{threeparttable}
 \end{table}
-
-\section{Wzory matematyczne}
 
 Czasem zachodzi potrzeba wytłumaczenia znaczenia symboli użytych w równaniu. Można to zrobić z użyciem zdefiniowanego na potrzeby niniejszej klasy środowiska \texttt{eqwhere}.
 
