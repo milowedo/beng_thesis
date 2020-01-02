@@ -92,5 +92,7 @@ jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcy
 Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie utrzymywać stan aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest np dla Auth service(3.2) ze względu na posiadane informacje o użytkownikach, które używane są w celu autoryzacji i autentykacji.
 Oprócz danych dostępowych, dla każdego klienta przechowywane są również zbiory książek - posiadanych i poszukiwanych.\linebreak
 
-Bazy danych można podzielić ze wględu na struktruę organizacji danych, którymi się kierują. Są to między innymi  
+Złożone bazy danych można podzielić ze wględu na struktury organizacji danych, które przechowują. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL). \linebreak
+Najczęściej spotykane są nadal bazy relacyjne, gdzie dane występują pod postacią powiązanych między sobą tabel. Posiadają one wewnętrzne języki programowania, wykorzystujące zwykle SQL, służące do wykonywania zaawansowanych operacji. Popularność jednak zyskują ostatnio bazy nierelacyjne, czyli takie, które nie posiadają tabel ani relacji, tak więc i nie wykorzystują języka SQL. Nie jest również najczęściej wymagane, aby struktura danych była jednorodna, jak jest to podytkowane użyciem tabel. 
+
 \section{Aplikacja mobilna}

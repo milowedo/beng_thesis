@@ -100,7 +100,7 @@ Supervisor: & {\itshape \@supervisor}\\
 
 \vspace*{1mm}
 
-{\small\bfseries \MakeUppercase{\@faculty}}}
+{\footnotesize\bfseries {\@faculty}}}
 \vspace*{3mm}
 
 {\small{\MakeUppercase{\@department}}}

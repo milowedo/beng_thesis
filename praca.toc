@@ -19,13 +19,13 @@
 \contentsline {section}{\numberline {3.4}OffersFetcher}{15}%
 \contentsline {section}{\numberline {3.5}Zewnętrzne API}{15}%
 \contentsline {section}{\numberline {3.6}Baza danych}{16}%
-\contentsline {section}{\numberline {3.7}Aplikacja mobilna}{16}%
-\contentsline {chapter}{\numberline {4}Implementacja}{17}%
-\contentsline {section}{\numberline {4.1}Technologie}{17}%
-\contentsline {chapter}{\numberline {5}Uzytkowanie}{19}%
-\contentsline {section}{\numberline {5.1}Struktura dokumentu}{19}%
-\contentsline {chapter}{\numberline {6}Podsumowanie}{21}%
-\contentsline {section}{\numberline {6.1}no jest to napisane i w ogóle}{21}%
+\contentsline {section}{\numberline {3.7}Aplikacja mobilna}{17}%
+\contentsline {chapter}{\numberline {4}Implementacja}{19}%
+\contentsline {section}{\numberline {4.1}Technologie}{19}%
+\contentsline {chapter}{\numberline {5}Uzytkowanie}{21}%
+\contentsline {section}{\numberline {5.1}Struktura dokumentu}{21}%
+\contentsline {chapter}{\numberline {6}Podsumowanie}{23}%
+\contentsline {section}{\numberline {6.1}no jest to napisane i w ogóle}{23}%
 \babel@toc {polish}{}
 \babel@toc {polish}{}
 \babel@toc {english}{}
