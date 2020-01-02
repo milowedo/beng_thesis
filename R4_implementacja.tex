@@ -13,6 +13,18 @@ tutaj gadane jakiś ogólny opis i w ogóle cnie
 
 %---------------------------------------------------------------------------
 
+\section{Autoryzacja użytkownika w Allegro}
+
+Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego. Allegro udostępnia tzw. ``ścieżkę device flow``, dzięki której cały proces odbywa się bez konieczności uwzględniania go w interfejsie. Podejście tutaj zaprezentowane bazuje na zarejestrowaniu jednego, wspólnego dla całej aplikacji, konta funkcjonalnego za pomocą którego każde zapytanie będzie się autentykować. Uzyskane zostaną dwa tokeny: 
+\begin{itemize}
+	\item dostępowy - ważny przez 12h.
+	\item odświeżający - ważny 6 miesięcy.
+\end{itemize}
+W momencie 
+
+%---------------------------------------------------------------------------
+
+
 \section{Elementy konifguracyjne}
 
 %---------------------------------------------------------------------------

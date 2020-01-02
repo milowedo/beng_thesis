@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 22:50
 entering extended mode
 **c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
 (c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
@@ -1176,18 +1176,18 @@ Underfull \hbox (badness 2762) in paragraph at lines 11--13
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 11--13
-\T1/ptm/m/n/12 ale mo»e by¢ u»y-wany rów-nie» w in-nych ce-lach. HTTP opiera si¦ na kla-sycz-nym
+Underfull \hbox (badness 2310) in paragraph at lines 11--13
+\T1/ptm/m/n/12 delu klient-serwer, gdzie klient ini-cjuje po-ª¡-cze-nie po-przez wy-sªa-nie »¡-da-nia, na-st¦p-
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 11--13
-\T1/ptm/m/n/12 mo-delu klient-serwer, gdzie klient ini-cjuje po-ª¡-cze-nie po-przez wy-sªa-nie »¡-da-nia, na-
+Underfull \hbox (badness 1365) in paragraph at lines 11--13
+\T1/ptm/m/n/12 nie czeka na od-po-wied¹. HTTP jest pro-to-ko-ªem bez-sta-no-wym, co ozna-cza, »e ser-wer
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 11--13
-\T1/ptm/m/n/12 wer nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oboma »¡-da-niami. (...)``[1]
+Underfull \hbox (badness 4205) in paragraph at lines 11--13
+\T1/ptm/m/n/12 nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oby-dwoma »¡-da-niami. (...)``[1]
  []
 
 
@@ -1295,7 +1295,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <relations.png, id=69, 497.86pt x 223.83624pt>
 File: relations.png Graphic file (type png)
 <use relations.png>
-Package pdftex.def Info: relations.png  used on input line 104.
+Package pdftex.def Info: relations.png  used on input line 103.
 (pdftex.def)             Requested size: 455.24411pt x 204.68178pt.
 
 
@@ -1303,7 +1303,7 @@ pdfTeX warning: pdflatex (file c:/Users/Millosz/Downloads/aghdpl-v3.1/nosql.pdf)
 <nosql.pdf, id=70, 395.97937pt x 381.67593pt>
 File: nosql.pdf Graphic file (type pdf)
 <use nosql.pdf>
-Package pdftex.def Info: nosql.pdf  used on input line 113.
+Package pdftex.def Info: nosql.pdf  used on input line 112.
 (pdftex.def)             Requested size: 455.24411pt x 438.80743pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1348,14 +1348,14 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  28798 strings out of 492484
- 541383 string characters out of 3130430
+ 541401 string characters out of 3130430
  916108 words of memory out of 3000000
  32765 multiletter control sequences out of 15000+200000
  607088 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,71p,1495b,2764s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (27 pages, 421632 bytes).
+Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (27 pages, 423571 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

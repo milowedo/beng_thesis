@@ -28,16 +28,18 @@
 \contentsline {chapter}{\numberline {3}Implementacja}{21}%
 \contentsline {section}{\numberline {3.1}Wybór technologii}{21}%
 \contentsline {section}{\numberline {3.2}Wielowątkowe tworzenie ofert}{21}%
-\contentsline {section}{\numberline {3.3}Elementy konifguracyjne}{21}%
-\contentsline {section}{\numberline {3.4}Wdrożenie}{21}%
+\contentsline {section}{\numberline {3.3}Autoryzacja użytkownika w Allegro}{21}%
+\contentsline {section}{\numberline {3.4}Elementy konifguracyjne}{21}%
+\contentsline {section}{\numberline {3.5}Wdrożenie}{21}%
 \contentsline {chapter}{\numberline {4}Interfejs}{23}%
-\contentsline {section}{\numberline {4.1}Struktura dokumentu}{23}%
+\contentsline {section}{\numberline {4.1}Logowanie i rejestracja}{23}%
+\contentsline {section}{\numberline {4.2}Wanted Screen}{23}%
+\contentsline {section}{\numberline {4.3}Logowanie i rejestracja}{23}%
+\contentsline {section}{\numberline {4.4}Logowanie i rejestracja}{23}%
 \contentsline {chapter}{\numberline {5}Podsumowanie}{25}%
 \contentsline {section}{\numberline {5.1}Wnioski}{25}%
 \contentsline {section}{\numberline {5.2}Możliwe rozszerzenia i usprawnienia}{25}%
 \babel@toc {polish}{}
-\babel@toc {polish}{}
-\babel@toc {english}{}
 \babel@toc {polish}{}
 \babel@toc {english}{}
 \babel@toc {polish}{}

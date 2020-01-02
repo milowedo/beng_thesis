@@ -50,7 +50,7 @@
     \field{langid}{english}
   \endentry
 
-  \entry{api_gateway}{manual}{}
+  \entry{richardson2018api}{article}{}
     \name{author}{1}{}{%
       {{hash=RC}{%
          family={Richardson},
@@ -63,9 +63,9 @@
     \strng{fullhash}{RC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{note}{https://microservices.io/}
-    \field{title}{Apigateway}
-    \field{langid}{english}
+    \field{title}{Api gateway}
+    \field{journaltitle}{Microservice architecture}
+    \field{year}{2018}
   \endentry
 
   \entry{allegroApi}{manual}{}
