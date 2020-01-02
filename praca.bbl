@@ -112,5 +112,67 @@
     \field{title}{Rest API}
     \field{langid}{english}
   \endentry
+
+  \entry{database}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ANDPAP}{%
+         family={Ameya\bibnamedelima Nayak},
+         familyi={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+         suffix={Anil\bibnamedelima Poriya},
+         suffixi={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+         given={Dikshay\bibnamedelima Poojary},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ANAPDP1}
+    \strng{fullhash}{ANAPDP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{title}{Type of NOSQL Databases and its Comparison withRelational
+  Databases}
+    \field{volume}{5}
+    \field{journaltitle}{International Journal of Applied Information Systems}
+    \field{year}{2013}
+  \endentry
+
+  \entry{mobile}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SZ}{%
+         family={Sroczyński},
+         familyi={S\bibinitperiod},
+         given={Zdzisław},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SZ1}
+    \strng{fullhash}{SZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{106\bibrangedash 117}
+    \field{title}{Jakość interakcji człowiek-komputer czynnikiem
+  decydującym o popularności aplikacji mobilnych}
+    \field{volume}{317}
+    \field{journaltitle}{Studia Ekonomiczne}
+    \field{year}{2017}
+  \endentry
+
+  \entry{usability}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JN}{%
+         family={J.},
+         familyi={J\bibinitperiod},
+         given={Nielsen},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JN1}
+    \strng{fullhash}{JN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Usability Engineering}
+    \field{journaltitle}{Academic Press}
+    \field{year}{1993}
+  \endentry
 \enddatalist
 \endinput

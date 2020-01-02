@@ -96,7 +96,7 @@ Supervisor: & {\itshape \@supervisor}\\
 
 \vspace*{2mm}
 
-{\sffamily{\large{\bfseries{\scshape Akademia G\'{o}rniczo-Hutnicza im. Stanis\l{}awa Staszica w Krakowie}}}
+{\sffamily{\normalsize{\bfseries{\scshape Akademia G\'{o}rniczo-Hutnicza im. Stanis\l{}awa Staszica w Krakowie}}}
 
 \vspace*{1mm}
 
@@ -109,10 +109,10 @@ Supervisor: & {\itshape \@supervisor}\\
 {\sffamily\Large \@thesistype}
 \vspace*{9mm}
 
-{\sffamily\Large\itshape \@titlePL}
+{\sffamily\large\itshape \@titlePL}
 \vspace*{1mm}
 
-{\sffamily\Large\itshape \@titleEN}
+{\sffamily\large\itshape \@titleEN}
 \vspace{\fill}
 \end{center}
 

@@ -5,9 +5,10 @@
 Architektura aplikacji jest złożona z części mobilnej oraz czterech rozproszonych serwisów, z czego każdy występuje jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. Warstwa prezentacyjna, porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi płynną interakcję z systemem w celu osiągnięcia zamierzonych akcji dostępnych w obrębie funkcjonalności.\\
 W ten sposób każda składowa część aplikacji może być niezależnie zarządzana. W momencie w którym pojedynczy element odpowiedzialny za szczególną usługę jest wyłączony, sama aplikacja może dalej działać wyłączając tylko funkcjonalności dostarczane przez niedostępny aktualnie serwis.\\
 \linebreak
-Takie podejście można określić mianem zorientowanym na usługi. Oznacza to, że przy tworzeniu systemu, spory nacisk kładziony jest na definiowanie spełniających wymagania użytkownika usług. Są one elementami oprogramowania zdolnymi do niezależnego funkcjonowania, udostępniającymi realizowane funkcje poprzez zdefiniowany interfejs.\\
-\linebreak
-HTTP (\texttt{Hypertext Transfer Protocol}), czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warstwy aplikacji, odpowiedzialny za transmisję dokumentów hipermedialnych, jak np. HTML. Został stworzony do komunikacji pomiędzy przeglądarkami, a serwerami webowymi, ale może być używany również w innych celach. HTTP opiera się na klasycznym modelu klient-serwer, gdzie klient inicjuje połączenie poprzez wysłanie żądania, następnie czeka na odpowiedź. HTTP jest protokołem bezstanowym, co oznacza, że serwer nie przechowuje żadnych danych (stanów) pomiędzy oboma żądaniami. (...)``\cite{http}
+Takie podejście można określić mianem zorientowanym na usługi. Oznacza to, że przy tworzeniu systemu, spory nacisk kładziony jest na definiowanie spełniających wymagania użytkownika usług. Są one elementami oprogramowania zdolnymi do niezależnego funkcjonowania, udostępniającymi realizowane funkcje poprzez zdefiniowany interfejs.
+
+\subsection{Hypertext Transfer Protocol}
+HTTP, czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warstwy aplikacji, odpowiedzialny za transmisję dokumentów hipermedialnych, jak np. HTML. Został stworzony do komunikacji pomiędzy przeglądarkami, a serwerami webowymi, ale może być używany również w innych celach. HTTP opiera się na klasycznym modelu klient-serwer, gdzie klient inicjuje połączenie poprzez wysłanie żądania, następnie czeka na odpowiedź. HTTP jest protokołem bezstanowym, co oznacza, że serwer nie przechowuje żadnych danych (stanów) pomiędzy oboma żądaniami. (...)``\cite{http}
 \linebreak
 
 \begin{figure}[H]
@@ -56,7 +57,6 @@ Warto implicite rozróżnić dwa bardzo ważne pojęcia związane z bezpieczeńs
 
 \textbf{Autoryzacja} to potwierdzenie, czy dany użytkownik jest uprawniony do skorzystania z konkretnego zasobu. Na tym etapie autentykacja została ewaluowana pozytywnie. Nie oznacza to jednak, że dany podmiot posiada dostęp w żądanym zakresie. 
 
-
 \section{Gateway}
 Gateway to serwis zbudowany według podejścia zwanego \texttt{wzorcem bramy interfejsu API}\cite{api_gateway}. Jest to element znajdujący się pomiędzy klientem a rozproszonymi usługami. Dzięki temu w prosty sposób można kontrolować wszelkie zapytania skierowane do poszczególnych serwisów.\\
 Jest to więc centralny punkt systemu, który ma na celu uproszczenie komunikacji warstwy prezentacyjnej z poszczególnymi usługami. Każde zapytanie wysłane do bramy zostaje zweryfikowane pod względem bezpieczeństwa. Następnie w zależności od potrzeb, modyfikowane, lub bezpośrednio przesłane dalej.
@@ -68,17 +68,21 @@ Jest to więc centralny punkt systemu, który ma na celu uproszczenie komunikacj
 
 \section{OffersFetcher}
 OffersFetcher to główna jednostka licząca w systemie. Usługa ta otrzymuje żądanie z listą książek oraz token dostępowy do REST API portalu Allegro. (3.5.)
-Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, którego rezultat jest przetwarzany i odkładany do odpowiedniej kolekcji, aby na koniec zostać wkomponowanym w pożądany rezultat. Analizowane są wszystkie obecnie dostępne w czasie rzeczywistym oferty sprzedaży w serwisie Allegro.pl. \\Dane otrzymane w ten sposób są przetwarzane i grupowane po unikalnym identyfikatorze sprzedawcy. Serwis zwraca odpowiedź w postaci listy zbiorów przedmiotów, które wpisują się w pozyzcje otrzymane w zapytaniu. 
+Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, którego rezultat jest przetwarzany i odkładany do odpowiedniej kolekcji, aby na koniec zostać wkomponowanym w pożądany rezultat. Analizowane są wszystkie obecnie dostępne w czasie rzeczywistym oferty sprzedaży w serwisie Allegro.pl. \\Dane otrzymane w ten sposób są przetwarzane i grupowane po unikalnym identyfikatorze sprzedawcy. Serwis zwraca odpowiedź w postaci listy zbiorów przedmiotów, które wpisują się w pozyzcje otrzymane w zapytaniu. W celu optymalizacji czasu w którym przygotowana zostaje odpowiedź, pobieranie danych oraz obliczenia wykonywane są asynchronicznie, co znacznie przyspiesza proces generowania wyników.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{booksToOffers.png}
+	\includegraphics[width=\linewidth]{booksToOffers.pdf}
 	\caption{Poszukiwane książki i bazująca na nich przykładowa oferta}
 \end{figure}
+
 \section{Zewnętrzne API}
+
 Źródłem danych dla ofert tworzonych w serwisie OffersFetcher (3.4.)
-jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcyjną on-line przedsiębiorstwa Allegro.pl. Portal ten umożliwa użytkownikom wystawianie na sprzedaż posiadanych przez nich przedmiotów oraz na korzystanie z ofert innych sprzedawców.\\
-``Allegro REST API działa w oparciu o protokół HTTP (...) Autoryzacja realizowana jest w standardzie OAuth2.``\cite{allegroApi}\\ \newpage
-\textbf{REST API} (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) to styl architektury oprogramowania w którym dane i funkcjonalności są odzwierciedlone  poprzez Ujednolicone Identyfikatory Zasobów(w skrócie URI). Termin ten został stworzony przez Roy Fielding w 2000 roku\cite{fielding}.Dostęp uzyskiwany jest poprzez proste i jasno zdefiniowane operacje. \linebreak Istnieje pięc obowiązkowych ograniczeń, które dokładnie definiują charakter tego podejścia:
+jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcyjną on-line przedsiębiorstwa Allegro.pl. Portal ten umożliwa użytkownikom wystawianie na sprzedaż posiadanych przez nich przedmiotów oraz na korzystanie z ofert innych sprzedawców. \\ Początkowo innym, alternatywnym rozwiązaniem miało być pobieranie całych stron HTML po uprzednim sfabrykowaniu URI, tak aby pasowało do zadanej pozycji. Następnie taki plik tekstowy miałby być przeszukiwany wyrażeniami regularnymi w celu ekstrakcji szukanych informacji. Z racji jednak na dość niestabilny i zasobochłonny chrakter, wybrano korzystanie z wystawionego API.\\
+``Allegro REST API działa w oparciu o protokół HTTP (...) Autoryzacja realizowana jest w standardzie OAuth2.``\cite{allegroApi}\linebreak
+
+\subsection{REST API}
+(\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) to styl architektury oprogramowania w którym dane i funkcjonalności są odzwierciedlone poprzez Ujednolicone Identyfikatory Zasobów(w skrócie URI). Termin ten został stworzony przez Roy Fielding w 2000 roku\cite{fielding}.Dostęp uzyskiwany jest poprzez proste i jasno zdefiniowane operacje. \linebreak Istnieje pięc obowiązkowych ograniczeń, które dokładnie definiują charakter tego podejścia:
 \begin{itemize}
 	\item bezstanowość - każde zapytanie do serwera powinno zawierać wszystkie informacje potrzebne do jego zrozumienia.
 	\item użycie buforownia podręcznego - jeżeli dane są lokalnie przechowywane, należy o tym bezpośrednio poinformować.
@@ -89,10 +93,51 @@ jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcy
 \cite{rest}
 
 \section{Baza danych}
-Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie utrzymywać stan aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest np dla Auth service(3.2) ze względu na posiadane informacje o użytkownikach, które używane są w celu autoryzacji i autentykacji.
-Oprócz danych dostępowych, dla każdego klienta przechowywane są również zbiory książek - posiadanych i poszukiwanych.\linebreak
+Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie przetrzymywać dane z aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest np dla Auth service(3.2) ze względu na posiadane informacje o użytkownikach, które używane są w celu autoryzacji i autentykacji.
+Oprócz danych dostępowych, dla każdego klienta przechowywane są również zbiory książek - posiadanych i poszukiwanych.
+Złożone bazy danych można podzielić ze wględu na struktury organizacji danych, które przechowują. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL).
+\newpage
+\subsection{Bazy relacyjne}
+Najczęściej spotykane są nadal bazy relacyjne, gdzie dane występują pod postacią powiązanych wzajemnie ze sobą tabel. Posiadają one wewnętrzne języki programowania, wykorzystujące zwykle SQL, służące do wykonywania zaawansowanych operacji.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{relations.png}
+	\caption{Przykład dwóch tabel i relacji pomiędzy nimi}
+	\caption*{Źródło: url{code.tutsplus.com}}
+\end{figure}
 
-Złożone bazy danych można podzielić ze wględu na struktury organizacji danych, które przechowują. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL). \linebreak
-Najczęściej spotykane są nadal bazy relacyjne, gdzie dane występują pod postacią powiązanych między sobą tabel. Posiadają one wewnętrzne języki programowania, wykorzystujące zwykle SQL, służące do wykonywania zaawansowanych operacji. Popularność jednak zyskują ostatnio bazy nierelacyjne, czyli takie, które nie posiadają tabel ani relacji, tak więc i nie wykorzystują języka SQL. Nie jest również najczęściej wymagane, aby struktura danych była jednorodna, jak jest to podytkowane użyciem tabel. 
+\subsection{Bazy nierelacyjne}
+Sporą popularność jednak zyskują ostatnio bazy nierelacyjne, czyli takie, które nie posiadają tabel ani relacji. W związku z tym przeważnie nie wykorzystują również języka SQL i to z stąd wzięła się ich nazwa - NoSQL (Not Only SQL database). Nie jest najczęściej też wymagane, aby struktura danych była jednorodna.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{nosql.pdf}
+	\caption{Przykład obiektu json w bazie NoSQL przechowującej dane jako dokumenty}
+\end{figure}
+
+\subsection{Porównanie}
+Przewagę relacyjnych baz danych można upatrywać w istotnie ugruntowanym interfejsie, stosunkowo łatwym utrzymaniu i tym, że w związku z wybitną popularnością, zestandaryzowany język zapytań jest tym, czego programiści spodziewają się po bazie danych.
+Nastepnie jednak, bazy typu NoSQL reprezentuje łatwa skalowalność oraz bardzo szeroki wybór modeli danych. Są one też szybsze, bardziej wydajne a ponadto daleko bardziej elastyczne. Nie wymagają być administrowanymi i obecnie rozwijają się coraz prężniej.\cite{database}
 
 \section{Aplikacja mobilna}
+Komponent w którym spotykają się wszystkie części składowe systemu. Podejście mobilne zostało wybrane ponieważ rynek związany z urządzeniami mobilnymi to obecnie najszybciej rozwijająca się gałąź przemysłu IT\cite{mobile}. Dzięki temu produkt potencjalnie mógłby trafić do szerszego grona odbiorców, zwłaszcza, że nie wymaga od użytkownika skomplikowanych czynności i można z niego korzystać na przykład w komunikacji miejskiej.
+
+\subsection{Użyteczność produktu}
+\subsubsection{Podstawowe cechy przyjaznej użytkownikowi aplikacji}
+ Ze względu na ograniczone medium jakim jest urządzenie mobilne, ważnym jest aby dostarczyć rozwiązanie, którego odbiorca chciałby używać. Warto więc zastanowić się nad określeniem aspektów, które składają się na przyjazną użytkownikowi formę.\\
+ ``Podstawowe atrybuty opisujące użyteczność aplikacji zostały zidentyfikowane w klasycznej pracy Nielsena\cite{usability}: 
+ \begin{itemize}
+	 \item efektywność (efficiency) – łatwość uzyskania celu,
+	 \item satysfakcja (satisfaction) – brak dyskomfortu, pozytywne nastawienie do
+	 produktu
+	 \item przyswajalność (learnability) – łatwość nauczenia się zasad działania w celu szybkiego rozpoczęcia pracy,
+	 \item zapamiętywalność (memorability) – łatwość powrotu do pracy z systemem
+	 po przerwie
+	 \item bezbłędność (faultlessness) – ograniczenie liczby popełnianych błędów oraz zdolność do wznowienia działania po awarii
+ \end{itemize}
+ Najłatwiej zmierzyć efektywność, która w wielu sytuacjach może zostać
+ wyrażona jako czas potrzebny do wykonania określonego zadania. Pozostałe
+ atrybuty są znacznie bardziej abstrakcyjne, a wśród nich największy ładunek
+ subiektywnych emocji z pewnością niesie satysfakcja użytkownika.``\cite{mobile}
+
+ \subsubsection{Funkcjonalności mające na celu spełnienie cech}
+ Tworzenie oprogramowania na urządzenia przenośne wymaga więc dokładnego zaplanowania interfejsu graficznego, który będzie nie tylko przyjazny wizualnie, ale i prezentuje możliwe akcje w sposób oczywisty i jednoznaczny. Powinien on więc płynnie i możliwie szybko odpowiadać na akcje użytkownika. Ze względu na odpowiednio mniejszą moc obliczeniową, należy zadbać o użycie właściwych elementów sterujących oraz zadbać o wydajne renderowanie. W ten sposób można uniknąć przechowywania niepotrzebnych referencji do użytych wcześniej obiektów oraz zwrócić uwagę na to, aby obliczenia wykonywane przez urządzenie nie były nazbyt skomplikowane. W trosce właśnie o to, zaawansowana logika licząca została wyekstraktowana do osobnego serwisu (3.4). Poprzez przechowywanie informacji w bazie danych, gwarantujemy, że po ponownym włączeniu aplikacji, nawet po wymuszonym zamknięciu - użytkownik nie straci swoich zmian.

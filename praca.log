@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 22:15
 entering extended mode
 **c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
 (c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
@@ -7,8 +7,8 @@ LaTeX2e <2019-10-01> patch level 3
 Document Class: aghdpl 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\report.cls"
 Document Class: report 2019/10/25 v1.4k Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size11.clo"
-File: size11.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -903,9 +903,9 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'polish'.
 
 LaTeX Warning: Unused global option(s):
-    [11pt].
+    [12pt].
 
-(c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
+(c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
 \openout1 = `praca.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
@@ -967,12 +967,12 @@ Package grfext Info: Graphics extension search list:
 * \topmargin=-40.36447pt
 * \headheight=28.45274pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=28.45274pt
-* \marginparwidth=103.0pt
+* \marginparwidth=85.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1103,11 +1103,11 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <12> not available
 (Font)              Font shape `T1/phv/b/sc' tried instead on input line 149.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 149.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 149.
  [1
 
@@ -1118,255 +1118,246 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 ] [2
 
 ]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 162.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 162.
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.toc)
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.toc [5
+
+])
 \tf@toc=\write4
 \openout4 = `praca.toc'.
 
- [5
-
-]
+ [6]
 \openout2 = `R1_wprowadzenie.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex [6
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
+Rozdzia\l  1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+) [7
 
 
 
 ]
-Rozdzia\l  1.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
-) [7]
-\openout2 = `R2_streszczenie.aux'.
+\openout2 = `R3_projekt.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.tex [8
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.tex [8
 
 
 
 ]
 Rozdzia\l  2.
-) [9]
-\openout2 = `R3_projekt.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.tex [10
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 5--9
+\T1/ptm/m/n/12 nia u»yt-kow-nika usªug. S¡ one ele-men-tami opro-gra-mo-wa-nia zdol-nymi do nie-za-le»-nego
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 11--13
+[]\T1/ptm/m/n/12 HTTP, czyli ``Pro-to-kóª Prze-sy-ªa-nia Da-nych Hi-per-tek-sto-wych to pro-to-kóª war-stwy
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 11--13
+\T1/ptm/m/n/12 apli-ka-cji, od-po-wie-dzialny za trans-mi-sj¦ do-ku-men-tów hi-per-me-dial-nych, jak np. HTML.
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 11--13
+\T1/ptm/m/n/12 Zo-staª stwo-rzony do ko-mu-ni-ka-cji po-mi¦-dzy prze-gl¡-dar-kami, a ser-we-rami we-bo-wymi,
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 11--13
+\T1/ptm/m/n/12 ale mo»e by¢ u»y-wany rów-nie» w in-nych ce-lach. HTTP opiera si¦ na kla-sycz-nym
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 11--13
+\T1/ptm/m/n/12 mo-delu klient-serwer, gdzie klient ini-cjuje po-ª¡-cze-nie po-przez wy-sªa-nie »¡-da-nia, na-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 11--13
+\T1/ptm/m/n/12 wer nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oboma »¡-da-niami. (...)``[1]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+<architecture_overview.png, id=35, 601.4972pt x 748.29562pt>
+File: architecture_overview.png Graphic file (type png)
+<use architecture_overview.png>
+Package pdftex.def Info: architecture_overview.png  used on input line 16.
+(pdftex.def)             Requested size: 455.24411pt x 566.36989pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 25.
+ (C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <c:/Users/Millosz/Downloads/aghdpl-v3.1/architecture_overview.png>]
+<json-token.png, id=44, 1567.8575pt x 361.35pt>
+File: json-token.png Graphic file (type png)
+<use json-token.png>
+Package pdftex.def Info: json-token.png  used on input line 48.
+(pdftex.def)             Requested size: 455.24411pt x 104.92114pt.
+ [11]
+<gateway.png, id=49, 437.38406pt x 246.1697pt>
+File: gateway.png Graphic file (type png)
+<use gateway.png>
+Package pdftex.def Info: gateway.png  used on input line 65.
+(pdftex.def)             Requested size: 455.24411pt x 256.22453pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
+[]\T1/ptm/m/n/12 Gateway to ser-wis zbu-do-wany we-dªug po-dej-±cia zwa-nego \T1/pcr/m/n/12 wzorcem bramy
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 61--67
+\T1/ptm/m/n/12 nymi usªu-gami. Dzi¦ki temu w pro-sty spo-sób mo»na kon-tro-lo-wa¢ wszel-kie za-py-ta-nia
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <c:/Users/Millosz/Downloads/aghdpl-v3.1/json-token.png>]
+
+pdfTeX warning: pdflatex (file c:/Users/Millosz/Downloads/aghdpl-v3.1/booksToOffers.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<booksToOffers.pdf, id=54, 487.8225pt x 350.81062pt>
+File: booksToOffers.pdf Graphic file (type pdf)
+<use booksToOffers.pdf>
+Package pdftex.def Info: booksToOffers.pdf  used on input line 74.
+(pdftex.def)             Requested size: 455.24411pt x 327.38531pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <c:/Users/Millosz/Downloads/aghdpl-v3.1/gateway.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+\T1/ptm/m/n/12 ``Allegro REST API dziaªa w opar-ciu o pro-to-kóª HTTP
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+\T1/ptm/m/n/12 (...) Au-to-ry-za-cja re-ali-zo-wana jest w stan-dar-dzie OAuth2.``[4]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+[]\T1/ptm/m/n/12 (\T1/ptm/b/n/12 RE\T1/ptm/m/n/12 presentational \T1/ptm/b/n/12 S\T1/ptm/m/n/12 tate \T1/ptm/b/n/12 T\T1/ptm/m/n/12 ransfer) to styl ar-chi-tek-tury opro-gra-mo-wa-nia w któ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+\T1/ptm/m/n/12 rym dane i funk-cjo-nal-no-±ci s¡ od-zwier-cie-dlone po-przez Ujed-no-li-cone Iden-ty-fi-ka-
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 85--87
+\T1/ptm/m/n/12 tory Za-so-bów(w skró-cie URI). Ter-min ten zo-staª stwo-rzony przez Roy Fiel-ding w
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 85--87
+\T1/ptm/m/n/12 2000 roku[5].Dost¦p uzy-ski-wany jest po-przez pro-ste i ja-sno zde-fi-nio-wane ope-ra-cje.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <c:/Users/Millosz/Downloads/aghdpl-v3.1/booksToOffers.pdf>] [15]
+<relations.png, id=69, 497.86pt x 223.83624pt>
+File: relations.png Graphic file (type png)
+<use relations.png>
+Package pdftex.def Info: relations.png  used on input line 104.
+(pdftex.def)             Requested size: 455.24411pt x 204.68178pt.
+
+
+pdfTeX warning: pdflatex (file c:/Users/Millosz/Downloads/aghdpl-v3.1/nosql.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<nosql.pdf, id=70, 395.97937pt x 381.67593pt>
+File: nosql.pdf Graphic file (type pdf)
+<use nosql.pdf>
+Package pdftex.def Info: nosql.pdf  used on input line 113.
+(pdftex.def)             Requested size: 455.24411pt x 438.80743pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <c:/Users/Millosz/Downloads/aghdpl-v3.1/relations.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <c:/Users/Millosz/Downloads/aghdpl-v3.1/nosql.pdf>]) [18] [19]
+\openout2 = `R4_implementacja.aux'.
+
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.tex [20
 
 
 
 ]
 Rozdzia\l  3.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10.
-(C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 5--12
+) [21]
+\openout2 = `R5_interfejs.aux'.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 HTTP (\T1/pcr/m/n/10.95 Hypertext Transfer Protocol\T1/ptm/m/n/10.95 ), czyli ``Pro-to-kóª Prze-sy-ªa-nia Da-nych Hi-per-
- []
-
-
-Underfull \hbox (badness 4001) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 tek-sto-wych to pro-to-kóª war-stwy apli-ka-cji, od-po-wie-dzialny za trans-mi-sj¦ do-ku-men-tów hi-per-
- []
-
-
-Underfull \hbox (badness 4013) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 me-dial-nych, jak np. HTML. Zo-staª stwo-rzony do ko-mu-ni-ka-cji po-mi¦-dzy prze-gl¡-dar-kami, a
- []
-
-
-Underfull \hbox (badness 3364) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 ser-we-rami we-bo-wymi, ale mo»e by¢ u»y-wany rów-nie» w in-nych ce-lach. HTTP opiera si¦
- []
-
-
-Underfull \hbox (badness 4205) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 na kla-sycz-nym mo-delu klient-serwer, gdzie klient ini-cjuje po-ª¡-cze-nie po-przez wy-sªa-nie »¡-
- []
-
-
-Underfull \hbox (badness 7814) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 da-nia, na-st¦p-nie czeka na od-po-wied¹. HTTP jest pro-to-ko-ªem bez-sta-no-wym, co ozna-cza,
- []
-
-
-Underfull \hbox (badness 4846) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 »e ser-wer nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oboma »¡-da-niami. (...)``[1]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--12
-
- []
-
-<architecture_overview.png, id=41, 601.4972pt x 748.29562pt>
-File: architecture_overview.png Graphic file (type png)
-<use architecture_overview.png>
-Package pdftex.def Info: architecture_overview.png  used on input line 15.
-(pdftex.def)             Requested size: 455.24411pt x 566.36989pt.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 20--25
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12 <c:/Users/Millosz/Downloads/aghdpl-v3.1/architecture_overview.png>]
-<json-token.png, id=51, 1567.8575pt x 361.35pt>
-File: json-token.png Graphic file (type png)
-<use json-token.png>
-Package pdftex.def Info: json-token.png  used on input line 47.
-(pdftex.def)             Requested size: 455.24411pt x 104.92114pt.
- [13 <c:/Users/Millosz/Downloads/aghdpl-v3.1/json-token.png>]
-<gateway.png, id=57, 582.175pt x 276.03125pt>
-File: gateway.png Graphic file (type png)
-<use gateway.png>
-Package pdftex.def Info: gateway.png  used on input line 65.
-(pdftex.def)             Requested size: 455.24411pt x 215.85104pt.
-<booksToOffers.png, id=58, 547.2947pt x 328.97906pt>
-File: booksToOffers.png Graphic file (type png)
-<use booksToOffers.png>
-Package pdftex.def Info: booksToOffers.png  used on input line 74.
-(pdftex.def)             Requested size: 455.24411pt x 273.6499pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <c:/Users/Millosz/Downloads/aghdpl-v3.1/gateway.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-[15 <c:/Users/Millosz/Downloads/aghdpl-v3.1/booksToOffers.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
-[]\T1/ptm/b/n/10.95 REST API \T1/ptm/m/n/10.95 (\T1/ptm/b/n/10.95 RE\T1/ptm/m/n/10.95 presentational \T1/ptm/b/n/10.95 S\T1/ptm/m/n/10.95 tate \T1/ptm/b/n/10.95 T\T1/ptm/m/n/10.95 ransfer) to styl ar-chi-tek-tury opro-gra-mo-wa-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
-\T1/ptm/m/n/10.95 nia w któ-rym dane i funk-cjo-nal-no-±ci s¡ od-zwier-cie-dlone po-przez Ujed-no-li-cone Iden-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
-\T1/ptm/m/n/10.95 ty-fi-ka-tory Za-so-bów(w skró-cie URI). Ter-min ten zo-staª stwo-rzony przez Roy Fiel-ding
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
-\T1/ptm/m/n/10.95 w 2000 roku[5].Dost¦p uzy-ski-wany jest po-przez pro-ste i ja-sno zde-fi-nio-wane ope-ra-cje.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-[]\T1/ptm/m/n/10.95 Warstwa per-sy-sten-cyjna jako osobny i nie-za-le»ny ser-wis ma za-da-nie utrzy-my-wa¢
- []
-
-
-Underfull \hbox (badness 4886) in paragraph at lines 92--94
-\T1/ptm/m/n/10.95 stan apli-ka-cji. Jest to ogrom-nie wa»ny ele-ment sys-temu, któ-rego dzia-ªa-nie nie-zb¦dne jest
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\T1/ptm/m/n/10.95 np dla Auth se-rvice(3.2) ze wzgl¦du na po-sia-dane in-for-ma-cje o u»yt-kow-ni-kach, które
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\T1/ptm/m/n/10.95 u»y-wane s¡ w celu au-to-ry-za-cji i au-ten-ty-ka-cji. Oprócz da-nych do-st¦-po-wych, dla ka»-
- []
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 92--94
-\T1/ptm/m/n/10.95 dego klienta prze-cho-wy-wane s¡ rów-nie» zbiory ksi¡-»ek - po-sia-da-nych i po-szu-ki-wa-nych.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
-[]\T1/ptm/m/n/10.95 Zªo»one bazy da-nych mo»na po-dzie-li¢ ze wgl¦du na struk-tury or-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
-\T1/ptm/m/n/10.95 ga-ni-za-cji da-nych, które prze-cho-wuj¡. S¡ to ko-lejno re-la-cyjne, obiek-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
-\T1/ptm/m/n/10.95 towe, relacyjno-obiektowe, stru-mie-niowe, tem-po-ralne, nie-re-la-cyjne (No-SQL).
- []
-
-) [16] [17]
-\openout2 = `R4_implementacja.aux'.
-
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.tex [18
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.tex [22
 
 
 
 ]
 Rozdzia\l  4.
-) [19]
-\openout2 = `R5_uzytkowanie.aux'.
+) [23]
+\openout2 = `R6_podsumowanie.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.tex [20
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.tex [24
 
 
 
 ]
 Rozdzia\l  5.
-) [21]
-\openout2 = `R6_podsumowanie.aux'.
-
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.tex [22
+) [25] [26
 
 
-
-]
-Rozdzia\l  6.
-) [23] [24
-
-
-] [25] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
+] [27] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28789 strings out of 492484
- 541302 string characters out of 3130430
- 916111 words of memory out of 3000000
- 32752 multiletter control sequences out of 15000+200000
- 609815 words of font info for 98 fonts, out of 3000000 for 9000
+ 28798 strings out of 492484
+ 541383 string characters out of 3130430
+ 916108 words of memory out of 3000000
+ 32765 multiletter control sequences out of 15000+200000
+ 607088 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,71p,1495b,2764s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (25 pages, 393012 bytes).
+Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (27 pages, 421632 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
