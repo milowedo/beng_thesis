@@ -17,7 +17,7 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{http}{article}{}
+  \entry{http}{manual}{}
     \name{author}{1}{}{%
       {{hash=MA}{%
          family={MDN},
@@ -26,18 +26,91 @@
          giveni={A\bibinitperiod},
       }}%
     }
-    \list{organization}{2}{%
-      {AGH University of Science}%
-      {Technology}%
-    }
     \strng{namehash}{MA1}
     \strng{fullhash}{MA1}
     \field{labelnamesource}{author}
+    \field{note}{https://developer.mozilla.org/pl/docs/Web/HTTP}
+    \field{langid}{polish}
+  \endentry
+
+  \entry{jwt}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=IA}{%
+         family={Inc.},
+         familyi={I\bibinitperiod},
+         given={Auth0},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IA1}
+    \strng{fullhash}{IA1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{note}{\\\texttt{https://developer.mozilla.org/pl/docs/Web/HTTP}}
-    \field{title}{{HTTP}}
+    \field{title}{https://jwt.io/introduction/}
     \field{langid}{english}
-    \field{year}{2019}
+  \endentry
+
+  \entry{api_gateway}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=RC}{%
+         family={Richardson},
+         familyi={R\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RC1}
+    \strng{fullhash}{RC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{https://microservices.io/}
+    \field{title}{Apigateway}
+    \field{langid}{english}
+  \endentry
+
+  \entry{allegroApi}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{note}{https://developer.allegro.pl/}
+    \field{title}{{Allegro REST API}}
+    \field{langid}{polish}
+  \endentry
+
+  \entry{fielding}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=FRT}{%
+         family={Fielding},
+         familyi={F\bibinitperiod},
+         given={Roy\bibnamedelima Thomas},
+         giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FRT1}
+    \strng{fullhash}{FRT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Architectural Styles and the Design of Network-based Software
+  Architectures}
+    \field{langid}{english}
+    \list{institution}{1}{%
+      {University of California}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2000}
+  \endentry
+
+  \entry{rest}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=h}{%
+         family={https://restfulapi.net/},
+         familyi={h\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{h1}
+    \strng{fullhash}{h1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Rest API}
+    \field{langid}{english}
   \endentry
 \enddatalist
 \endinput

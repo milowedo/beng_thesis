@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  29 DEC 2019 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 12:35
 entering extended mode
 **c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
 (c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
@@ -874,6 +874,13 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 ) (C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/threeparttable\threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box61
+) (C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count439
+\float@exts=\toks37
+\float@box=\box62
+\@float@everytoks=\toks38
+\@floatcapt=\box63
 )
 Package biblatex Info: Trying to load language 'polish'...
 Package biblatex Info: ... file 'polish.lbx' found.
@@ -888,7 +895,7 @@ File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                'urldate=iso' requires 'seconds=true'.
-(biblatex)                Setting 'seconds=true' on input line 145.
+(biblatex)                Setting 'seconds=true' on input line 147.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -898,66 +905,37 @@ Package csquotes Info: Redefining alias 'default' -> 'polish'.
 LaTeX Warning: Unused global option(s):
     [11pt].
 
-(c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux
-
-LaTeX Warning: Label `sec:strukturaDokumentu' multiply defined.
-
-
-LaTeX Warning: Label `sec:kompilacja' multiply defined.
-
-
-LaTeX Warning: Label `sec:narzedzia' multiply defined.
-
-
-LaTeX Warning: Label `sec:przygotowanieDokumentu' multiply defined.
-
-) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux
-
-LaTeX Warning: Label `cha:pierwszyDokument' multiply defined.
-
-
-LaTeX Warning: Label `sec:strukturaDokumentu' multiply defined.
-
-
-LaTeX Warning: Label `sec:kompilacja' multiply defined.
-
-
-LaTeX Warning: Label `sec:narzedzia' multiply defined.
-
-
-LaTeX Warning: Label `sec:przygotowanieDokumentu' multiply defined.
-
-))
+(c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 147.
  (C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count439
+\scratchcounter=\count440
 \scratchdimen=\dimen275
-\scratchbox=\box62
-\nofMPsegments=\count440
-\nofMParguments=\count441
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count442
+\scratchbox=\box64
+\nofMPsegments=\count441
+\nofMParguments=\count442
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count443
 \MPscratchDim=\dimen276
-\MPnumerator=\count443
-\makeMPintoPDFobject=\count444
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count444
+\makeMPintoPDFobject=\count445
+\everyMPtoPDFconversion=\toks40
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
  ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
@@ -1005,6 +983,7 @@ Package grfext Info: Graphics extension search list:
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1100,36 +1079,36 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'praca.bbl' found.
  (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.bbl)
-Package biblatex Info: Reference section=0 on input line 145.
-Package biblatex Info: Reference segment=0 on input line 145.
-\c@lstlisting=\count445
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+Package biblatex Info: Reference section=0 on input line 147.
+Package biblatex Info: Reference segment=0 on input line 147.
+\c@lstlisting=\count446
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <agh.jpg, id=1, 146.4672pt x 284.7438pt>
 File: agh.jpg Graphic file (type jpg)
 <use agh.jpg>
-Package pdftex.def Info: agh.jpg  used on input line 147.
+Package pdftex.def Info: agh.jpg  used on input line 149.
 (pdftex.def)             Requested size: 87.88098pt x 170.8476pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 147.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 149.
  (C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <12> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 147.
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 147.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 147.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 149.
  [1
 
 {C:/Users/Millosz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <c:/Users/Millosz/Downloads/aghdpl-v3.1/agh.jpg>] [2
@@ -1140,29 +1119,29 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 160.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 162.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 160.
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.toc [5
-
-])
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 162.
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.toc)
 \tf@toc=\write4
 \openout4 = `praca.toc'.
 
- [6]
+ [5
+
+]
 \openout2 = `R1_wprowadzenie.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex [6
+
+
+
+]
 Rozdzia\l  1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
-) [7
-
-
-
-]
+) [7]
 \openout2 = `R2_streszczenie.aux'.
 
  (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.tex [8
@@ -1195,7 +1174,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 HTTP (\T1/pcr/m/n/10.95 Hypertext Transfer Protocol\T1/ptm/m/n/10.95 ), czyli Pro-to-kóª Prze-sy-ªa-nia Da-nych Hi-per-
+\T1/ptm/m/n/10.95 HTTP (\T1/pcr/m/n/10.95 Hypertext Transfer Protocol\T1/ptm/m/n/10.95 ), czyli ``Pro-to-kóª Prze-sy-ªa-nia Da-nych Hi-per-
  []
 
 
@@ -1219,13 +1198,13 @@ Underfull \hbox (badness 4205) in paragraph at lines 5--12
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 da-nia, na-st¦p-nie czeka na od-po-wied¹. HTTP jest pro-to-ko-ªem bez-sta-no-wym, co ozna-cza, »e
+Underfull \hbox (badness 7814) in paragraph at lines 5--12
+\T1/ptm/m/n/10.95 da-nia, na-st¦p-nie czeka na od-po-wied¹. HTTP jest pro-to-ko-ªem bez-sta-no-wym, co ozna-cza,
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 5--12
-\T1/ptm/m/n/10.95 ser-wer nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oboma »¡-da-niami. (...)  [1]
+Underfull \hbox (badness 4846) in paragraph at lines 5--12
+\T1/ptm/m/n/10.95 »e ser-wer nie prze-cho-wuje »ad-nych da-nych (sta-nów) po-mi¦-dzy oboma »¡-da-niami. (...)``[1]
  []
 
 
@@ -1233,38 +1212,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
-<architektura.png, id=41, 1005.7575pt x 481.8pt>
-File: architektura.png Graphic file (type png)
-<use architektura.png>
-Package pdftex.def Info: architektura.png  used on input line 17.
-(pdftex.def)             Requested size: 455.24411pt x 218.07982pt.
+<architecture_overview.png, id=41, 601.4972pt x 748.29562pt>
+File: architecture_overview.png Graphic file (type png)
+<use architecture_overview.png>
+Package pdftex.def Info: architecture_overview.png  used on input line 15.
+(pdftex.def)             Requested size: 455.24411pt x 566.36989pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 18.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11] [12 <c:/Users/Millosz/Downloads/aghdpl-v3.1/architektura.png>]
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 20--25
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <c:/Users/Millosz/Downloads/aghdpl-v3.1/architecture_overview.png>]
+<json-token.png, id=51, 1567.8575pt x 361.35pt>
+File: json-token.png Graphic file (type png)
+<use json-token.png>
+Package pdftex.def Info: json-token.png  used on input line 47.
+(pdftex.def)             Requested size: 455.24411pt x 104.92114pt.
+ [13 <c:/Users/Millosz/Downloads/aghdpl-v3.1/json-token.png>]
+<gateway.png, id=57, 582.175pt x 276.03125pt>
+File: gateway.png Graphic file (type png)
+<use gateway.png>
+Package pdftex.def Info: gateway.png  used on input line 65.
+(pdftex.def)             Requested size: 455.24411pt x 215.85104pt.
+<booksToOffers.png, id=58, 547.2947pt x 328.97906pt>
+File: booksToOffers.png Graphic file (type png)
+<use booksToOffers.png>
+Package pdftex.def Info: booksToOffers.png  used on input line 74.
+(pdftex.def)             Requested size: 455.24411pt x 273.6499pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <c:/Users/Millosz/Downloads/aghdpl-v3.1/gateway.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
+[15 <c:/Users/Millosz/Downloads/aghdpl-v3.1/booksToOffers.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+[]\T1/ptm/b/n/10.95 REST API \T1/ptm/m/n/10.95 (\T1/ptm/b/n/10.95 RE\T1/ptm/m/n/10.95 presentational \T1/ptm/b/n/10.95 S\T1/ptm/m/n/10.95 tate \T1/ptm/b/n/10.95 T\T1/ptm/m/n/10.95 ransfer) to styl ar-chi-tek-tury opro-gra-mo-wa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+\T1/ptm/m/n/10.95 nia w któ-rym dane i funk-cjo-nal-no-±ci s¡ od-zwier-cie-dlone po-przez Ujed-no-li-cone Iden-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+\T1/ptm/m/n/10.95 ty-fi-ka-tory Za-so-bów(w skró-cie URI). Ter-min ten zo-staª stwo-rzony przez Roy Fiel-ding
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+\T1/ptm/m/n/10.95 w 2000 roku[5].Dost¦p uzy-ski-wany jest po-przez pro-ste i ja-sno zde-fi-nio-wane ope-ra-cje.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+[]\T1/ptm/m/n/10.95 Warstwa per-sy-sten-cyjna jako osobny i nie-za-le»ny ser-wis ma za-da-nie utrzy-my-wa¢
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 92--94
+\T1/ptm/m/n/10.95 stan apli-ka-cji. Jest to ogrom-nie wa»ny ele-ment sys-temu, któ-rego dzia-ªa-nie nie-zb¦dne jest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+\T1/ptm/m/n/10.95 np dla Auth se-rvice(3.2) ze wzgl¦du na po-sia-dane in-for-ma-cje o u»yt-kow-ni-kach, które
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+\T1/ptm/m/n/10.95 u»y-wane s¡ w celu au-to-ry-za-cji i au-ten-ty-ka-cji. Oprócz da-nych do-st¦-po-wych, dla ka»-
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 92--94
+\T1/ptm/m/n/10.95 dego klienta prze-cho-wy-wane s¡ rów-nie» zbiory ksi¡-»ek - po-sia-da-nych i po-szu-ki-wa-nych.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+
+ []
+
+) [16]
 \openout2 = `R4_implementacja.aux'.
 
  (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.tex
 Rozdzia\l  4.
-[13
+) [17
 
 
 
-] [14]) [15]
+]
 \openout2 = `R5_uzytkowanie.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.tex [16
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.tex [18
 
 
 
 ]
 Rozdzia\l  5.
-[17] [18]) [19]
+) [19]
 \openout2 = `R6_podsumowanie.aux'.
 
  (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.tex [20
@@ -1273,29 +1332,26 @@ Rozdzia\l  5.
 
 ]
 Rozdzia\l  6.
-[21] [22]) [23] [24
+) [21] [22
 
 
-] [25] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
-
-LaTeX Warning: There were multiply-defined labels.
-
+] [23] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R2_streszczenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28944 strings out of 492484
- 541460 string characters out of 3130430
- 921112 words of memory out of 3000000
- 32913 multiletter control sequences out of 15000+200000
- 610344 words of font info for 100 fonts, out of 3000000 for 9000
+ 28788 strings out of 492484
+ 541292 string characters out of 3130430
+ 916112 words of memory out of 3000000
+ 32751 multiletter control sequences out of 15000+200000
+ 608079 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,12n,71p,1495b,2768s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,71p,1495b,2764s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (25 pages, 297018 bytes).
+Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (23 pages, 388897 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

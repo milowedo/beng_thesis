@@ -2,81 +2,57 @@
 
 \section{Architektura}
 
-Architektura aplikacji jest złożona z części mobilnej oraz czterech serwisów, z czego każdy występuje
-jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. 
-Warstwa prezentacyjna porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi swobodne przeglądanie
-wyników
-W ten sposób każda składowa część aplikacji może być niezależnie zarządzana 
+Architektura aplikacji jest złożona z części mobilnej oraz czterech serwisów, z czego każdy występuje jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. Warstwa prezentacyjna, porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi płynną interakcję z systemem w celu osiągnięcia zamierzonych akcji dostępnych w obrębie funkcjonalności.\\
+W ten sposób każda składowa część aplikacji może być niezależnie zarządzana. W momencie w którym pojedynczy element odpowiedzialny za szczególną usługę jest wyłączony, sama aplikacja może dalej działać wyłączając tylko funkcjonalności dostarczane przez niedostępny aktualnie serwis.\\
+\linebreak
+Takie podejście można określić mianem zorientowanym na usługi. Oznacza to, że przy tworzeniu systemu, spory nacisk kładziony jest na definiowanie spełniających wymagania użytkownika usług. Są one elementami oprogramowania zdolnymi do niezależnego funkcjonowania, udostępniającymi realizowane funkcje poprzez zdefiniowany interfejs.\\
+\linebreak
+HTTP (\texttt{Hypertext Transfer Protocol}), czyli "Protokół Przesyłania Danych Hipertekstowych to protokół warstwy aplikacji, odpowiedzialny za transmisję dokumentów hipermedialnych, jak np. HTML. Został stworzony do komunikacji pomiędzy przeglądarkami, a serwerami webowymi, ale może być używany również w innych celach. HTTP opiera się na klasycznym modelu klient-serwer, gdzie klient inicjuje połączenie poprzez wysłanie żądania, następnie czeka na odpowiedź. HTTP jest protokołem bezstanowym, co oznacza, że serwer nie przechowuje żadnych danych (stanów) pomiędzy oboma żądaniami. (...) "~\cite{http}
+\linebreak
 
-HTTP, czyli \texttt{Hypertext Transfer Protocol}
-
-
-
-
-
-Pakiet \texttt{siunitx} zadba o to, by liczba została poprawnie sformatowana: \\
-\begin{center}
-	\num{1234567890.0987654321}
-\end{center}
-
-
-\section{Rysunek}
-
-Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośników do ,,podilustracji'': \\
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\begin{subfigure}{0.35\textwidth}
-		\centering
-		\framebox[2.0\width]{A}
-		\subcaption{\label{subfigure_a}}
-	\end{subfigure}
-	\begin{subfigure}{0.35\textwidth}
-		\centering
-		\framebox[2.0\width]{B}
-		\subcaption{\label{subfigure_b}}
-	\end{subfigure}
-	
-	\caption{\label{fig:subcaption_example}Przykład użycia \texttt{\textbackslash subcaption}: \protect\subref{subfigure_a} litera A, \protect\subref{subfigure_b} litera B.}
+	\includegraphics[width=\linewidth]{architecture_overview.png}
+	\caption{Rysunek poglądowy struktury}
 \end{figure}
 
-\section{Tabela}
+\section{Auth service}
+Auth service dba o zachowanie bezpieczeństwa w całym systemie.
+Poprzez ekstrakcję funkcjonalności związanej z tworzeniem kont, logowaniem oraz zarządzaniem dostępem do pozostałych sektorów, gwarantuje niezawodną autentykację i autoryzację użytkownika pragnącego korzystać z aplikacji.\\
+Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. 
+\\
+W celu swobodnego poruszania się po aplikacji należy uzyskać JWT(\texttt{JSON Web Token}). Aby pozsykać token należy się zarejestrować lub zalogować na ekranie logowania. Zapytanie utworzone w ten sposób zostanie wysłane do Auth service. W odpowiedzi przesłany zostanie wyżej wymieniony klucz dostępowy.\\
 
-Pakiet \texttt{threeparttable} umożliwia dodanie do tabeli adnotacji: \\
+\subsection{JSON Web Token}
 
-\begin{table}[h]
-	\centering
+JSON Web Token to otwarty standard, który definiuje kompaktowy i samodzielny sposób na bezpieczny transfer danych. Poszczególna instancja składa się z trzech części oddzielonych kropkami w bezpośrednim formacie xx..x.y..yy.zz..z, gdzie poszczególne człony reprezentują: \cite{jwt}
+\begin{enumerate}%[1)]
+	\item Header - nagłówek, zawierający dwie informacje:
+		\begin{itemize}
+			\item typ tokenu, w tym przypadku "JWT"
+			\item algorytm szyfrujący(n.p. HMAC, SHA256 lub RSA)
+		\end{itemize}
+
+	\item Payload - lista wyrażeń opisujących szyfrowaną informację, w przypadku użytkownika - np jego login, czy email.
 	
-	\begin{threeparttable}
-		\caption{Przykład tabeli}
-		\label{tab:table_example}
-		
-		\begin{tabularx}{0.6\textwidth}{C{1}}
-			\toprule
-			\thead{Nagłówek\tnote{a}} \\
-			\midrule
-			Tekst 1 \\
-			Tekst 2 \\
-			\bottomrule
-		\end{tabularx}
-		
-		\begin{tablenotes}
-			\footnotesize
-			\item[a] Jakiś komentarz\textellipsis
-		\end{tablenotes}
-		
-	\end{threeparttable}
-\end{table}
+	\item Signature - podpis stworzony poprzez zaszyfrowanie podanym w headerze algorytmem szyfrującym ciągu składającego się z
+	\begin{itemize}
+		\item zakodowanego za pomocą Base64 (specjalnego kodowania transportowego) nagłówka i listy wyrażeń
+		\item sekretu, czyli unikalnego dla danych klucza.
+	\end{itemize}
+	\end{enumerate}
 
-Czasem zachodzi potrzeba wytłumaczenia znaczenia symboli użytych w równaniu. Można to zrobić z użyciem zdefiniowanego na potrzeby niniejszej klasy środowiska \texttt{eqwhere}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{json-token.png}
+		\caption{Przykładowy token jwt \cite{jwt}}
+	\end{figure}
 
-\begin{equation}
-E = mc^2
-\end{equation}
-gdzie
-\begin{eqwhere}[2cm]
-	\item[$m$] masa
-	\item[$c$] prędkość światła w próżni
-\end{eqwhere}
+\subsection{JSON Web Token}
 
-Odległość półpauzy od lewego marginesu należy dobrać pod kątem najdłuższego symbolu (bądź listy symboli) poprzez odpowiednie ustawienie parametru tego środowiska (domyślnie: 2 cm).
+
+\section{Gateway}
+\section{Obliczanie ofert}
+\section{Baza danych}
+\section{Aplikacja mobilna}
+\section{Zewnętrzne API}

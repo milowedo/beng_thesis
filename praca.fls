@@ -204,6 +204,8 @@ INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\makecell\makecell.st
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\makecell\makecell.sty
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\threeparttable\threeparttable.sty
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\threeparttable\threeparttable.sty
+INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\float\float.sty
+INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\polish.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\polish.lbx
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx
@@ -319,13 +321,16 @@ INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8t.t
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\praca.toc
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\praca.toc
+OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\praca.toc
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmr8r.tfm
-OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\praca.toc
+OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmri8t.tfm
@@ -333,9 +338,6 @@ INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmro8t.v
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmro8r.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmri8r.tfm
-OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.tex
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmb8t.vf
@@ -351,29 +353,40 @@ INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.tex
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\psnfss\t1pcr.fd
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\tex\latex\psnfss\t1pcr.fd
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrr8t.tfm
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architektura.png
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architektura.png
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architektura.png
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architektura.png
-INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architektura.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architecture_overview.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architecture_overview.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architecture_overview.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architecture_overview.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\architecture_overview.png
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\courier\pcrr8t.vf
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrr8r.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\json-token.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\json-token.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\json-token.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\json-token.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\json-token.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\gateway.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\gateway.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\gateway.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\gateway.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\gateway.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\booksToOffers.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\booksToOffers.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\booksToOffers.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\booksToOffers.png
+INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\booksToOffers.png
 OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.tex
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.tex
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmri8t.tfm
-INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrr8t.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\Millosz\AppData\Roaming\MiKTeX\2.9\fonts\tfm\adobe\times\ptmri8r.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\courier\pcrr8t.vf
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\courier\pcrr8r.tfm
 OUTPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.aux
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.tex
 INPUT c:\Users\Millosz\Downloads\aghdpl-v3.1\R5_uzytkowanie.tex
