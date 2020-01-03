@@ -1,58 +1,60 @@
-\chapter{Projekt aplikacji}
+\chapter{Implementacja}
+\label{cha:implementacja}
 
-\section{Architektura}
+Ze względu na charakter aplikacji, która składa się z autonomicznych elementów, znaczna część implementacji poszczególnych serwisów mogła odbywać się niezależnie od innych. Tworzone funkcjonalności testowane były przy pomocy narzędzia Postman, za pomocą którego można wysyłać dowolnie skonfigurowane zapytania HTTP na konkretne adresy URI. Kolejne, gotowe usługi były następnie integrowane w sytemie.
 
-Architektura aplikacji jest złożona z części mobilnej oraz czterech serwisów, z czego każdy występuje jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. Warstwa prezentacyjna, porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi płynną interakcję z systemem w celu osiągnięcia zamierzonych akcji dostępnych w obrębie funkcjonalności.\\
-W ten sposób każda składowa część aplikacji może być niezależnie zarządzana. W momencie w którym pojedynczy element odpowiedzialny za szczególną usługę jest wyłączony, sama aplikacja może dalej działać wyłączając tylko funkcjonalności dostarczane przez niedostępny aktualnie serwis.\\
-\linebreak
-Takie podejście można określić mianem zorientowanym na usługi. Oznacza to, że przy tworzeniu systemu, spory nacisk kładziony jest na definiowanie spełniających wymagania użytkownika usług. Są one elementami oprogramowania zdolnymi do niezależnego funkcjonowania, udostępniającymi realizowane funkcje poprzez zdefiniowany interfejs.\\
-\linebreak
-HTTP (\texttt{Hypertext Transfer Protocol}), czyli "Protokół Przesyłania Danych Hipertekstowych to protokół warstwy aplikacji, odpowiedzialny za transmisję dokumentów hipermedialnych, jak np. HTML. Został stworzony do komunikacji pomiędzy przeglądarkami, a serwerami webowymi, ale może być używany również w innych celach. HTTP opiera się na klasycznym modelu klient-serwer, gdzie klient inicjuje połączenie poprzez wysłanie żądania, następnie czeka na odpowiedź. HTTP jest protokołem bezstanowym, co oznacza, że serwer nie przechowuje żadnych danych (stanów) pomiędzy oboma żądaniami. (...) "~\cite{http}
-\linebreak
+%---------------------------------------------------------------------------
+
+\section{Metodyka pracy}
+Projekt powstawał iteracyjnie. To znaczy, że podczas pracy zaczynano od małych celów i po ich realizacji - stawiano trochę większe, udoskonalano obecny wówczas stan i przechodzono do kolejnego, bardziej zaawansowanego kroku. W ten sposób, możliwe było dokładne kontrolowanie rozwoju systemu, jego testowanie i w razie problemów, szybka analiza i znalezienie ich przyczyny. 
+
+\subsection{Version Control System}
+\textbf{VCS} - rozwój projektu śledzony był za pomocą systemu kontroli wersji.
+Pozwala on dokumentować wszystkie, kolejne zmiany, które mają miejsce w odniesieniu do kodu. Dzięki temu wygodniejsze są również potencjalne eksperymenty, ponieważ w każdym momencie, możliwy jest powrót do dowolnego, poprzedniego stanu implementowanych funkcjonalności.\cite{vcs}
+
+
+%---------------------------------------------------------------------------
+
+\section{Wybór technologii}
+
+%---------------------------------------------------------------------------
+
+\section{Wielowątkowe tworzenie ofert}
+
+%---------------------------------------------------------------------------
+
+\section{Autoryzacja użytkownika w Allegro API}
+
+Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego. Allegro udostępnia tzw. ``ścieżkę device flow``, dzięki której cały proces odbywa się bez konieczności uwzględniania go w interfejsie graficznym. Poniżej zaprezentowany jest diagram prezentujący tę funkcjonalność.\\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{architecture_overview.png}
-	\caption{Rysunek poglądowy struktury}
+	\includegraphics[width=\linewidth]{device_flow.png}
+	\caption{Autoryzacja użytkownika typu Device flow}
+	\caption*{Źródło: {https://developer.allegro.pl/}}
 \end{figure}
 
-\section{Auth service}
-Auth service dba o zachowanie bezpieczeństwa w całym systemie.
-Poprzez ekstrakcję funkcjonalności związanej z tworzeniem kont, logowaniem oraz zarządzaniem dostępem do pozostałych sektorów, gwarantuje niezawodną autentykację i autoryzację użytkownika pragnącego korzystać z aplikacji.\\
-Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. 
-\\
-W celu swobodnego poruszania się po aplikacji należy uzyskać JWT(\texttt{JSON Web Token}). Aby pozsykać token należy się zarejestrować lub zalogować na ekranie logowania. Zapytanie utworzone w ten sposób zostanie wysłane do Auth service. W odpowiedzi przesłany zostanie wyżej wymieniony klucz dostępowy.\\
+Podejście w tej pracy zakłada zarejestrowanie jednego, wspólnego dla całego systemu, konta funkcjonalnego za pomocą którego każde zapytanie będzie autentykowane. Stwarza to niestety jedno ograniczenie, a mianowicie, ze względu na obowiązujący główny limit nakładany na Client ID po przekroczeniu liczby 9000 zapytań na minutę, aplikacja zwróci status HTTP 429 i zostanie zabklokowana na kolejne 60 sekund.\\
+W fazie inicjalizacyjnej autoryzacji uzyskane zostaną dwa unikalne tokeny: 
+\begin{itemize}
+	\item dostępowy - ważny przez 12h.
+	\item odświeżający - ważny 6 miesięcy.
+\end{itemize}
+Zostaną one zachowanie w pamięci, a każde kolejne zapytanie, w przypadku wygaśnięcia tokenu dostępowego, spowoduje jego odnowienie.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{authorization.png}
+	\caption{Kod odpowiedzialny za utrzymywanie ważnego tokena}
+\end{figure}
+Powyższy kod prezentuje przebieg akcji, które maja miejsce za każdym razem, kiedy otrzymywane jest zapytanie do OffersService(2.4). Na początku sprawdzane jest, czy token jest zwyczajnie aktualny, następnie, w przypadku, gdy nie jest, pobierany jest token odświeżający. W zależności od tego, czy jest on ważny, wygaśnięty, czy może w ogóle nigdy nie został uzyskany, odpowiednia logika zostaje uruchomiona.
 
-\subsection{JSON Web Token}
-
-JSON Web Token to otwarty standard, który definiuje kompaktowy i samodzielny sposób na bezpieczny transfer danych. Poszczególna instancja składa się z trzech części oddzielonych kropkami w bezpośrednim formacie xx..x.y..yy.zz..z, gdzie poszczególne człony reprezentują: \cite{jwt}
-\begin{enumerate}%[1)]
-	\item Header - nagłówek, zawierający dwie informacje:
-		\begin{itemize}
-			\item typ tokenu, w tym przypadku "JWT"
-			\item algorytm szyfrujący(n.p. HMAC, SHA256 lub RSA)
-		\end{itemize}
-
-	\item Payload - lista wyrażeń opisujących szyfrowaną informację, w przypadku użytkownika - np jego login, czy email.
-	
-	\item Signature - podpis stworzony poprzez zaszyfrowanie podanym w headerze algorytmem szyfrującym ciągu składającego się z
-	\begin{itemize}
-		\item zakodowanego za pomocą Base64 (specjalnego kodowania transportowego) nagłówka i listy wyrażeń
-		\item sekretu, czyli unikalnego dla danych klucza.
-	\end{itemize}
-	\end{enumerate}
-
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\linewidth]{json-token.png}
-		\caption{Przykładowy token jwt \cite{jwt}}
-	\end{figure}
-
-\subsection{JSON Web Token}
+%---------------------------------------------------------------------------
 
 
-\section{Gateway}
-\section{Obliczanie ofert}
-\section{Baza danych}
-\section{Aplikacja mobilna}
-\section{Zewnętrzne API}
+\section{Wdrożenie}
+
+%---------------------------------------------------------------------------
+
+\section{Elementy konifguracyjne}
+
+%---------------------------------------------------------------------------

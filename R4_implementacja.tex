@@ -1,11 +1,31 @@
 \chapter{Implementacja}
 \label{cha:implementacja}
 
-tutaj gadane jakiś ogólny opis i w ogóle cnie
+Ze względu na charakter aplikacji, która składa się z autonomicznych elementów, znaczna część implementacji poszczególnych serwisów mogła odbywać się niezależnie od innych. Tworzone funkcjonalności testowane były przy pomocy narzędzia Postman, za pomocą którego można wysyłać dowolnie skonfigurowane zapytania HTTP na konkretne adresy URI. Kolejne, gotowe usługi były następnie integrowane w sytemie.
+
+%---------------------------------------------------------------------------
+
+\section{Metodyka pracy}
+Projekt powstawał iteracyjnie. To znaczy, że podczas pracy zaczynano od małych celów i po ich realizacji - stawiano trochę większe, udoskonalano obecny wówczas stan i przechodzono do kolejnego, bardziej zaawansowanego kroku. W ten sposób, możliwe było dokładne kontrolowanie rozwoju systemu, jego testowanie i w razie problemów, szybka analiza i znalezienie ich przyczyny. 
+
+\subsection{Version Control System}
+\textbf{VCS} - rozwój usług śledzony był za pomocą systemu kontroli wersji.
+Pozwala on dokumentować wszystkie, kolejne zmiany, które mają miejsce w odniesieniu do kodu. Dzięki temu wygodniejsze są również potencjalne eksperymenty, ponieważ w każdym momencie, możliwy jest powrót do dowolnego, poprzedniego stanu implementowanych funkcjonalności.\cite{vcs}\\
+W projekcie korzystano z hostingu na platformie GitHub.
+
+\subsection{Organizacja zadań}
+\textbf{Kanban} to metodologia, która może być użyta jako narzędzie do zarządania projektem podczas produkcji oprogramowania. Oryginalnie wymyślona w celu optymalizacji produkcji w Japońskiej firmie Toyota. Jej implementacja w procesie rozwijania systemów informatycznych znacząco wzrasta ze względu na przewagę nad tradycyjnymi metodami objawiącej się elastycznością, wydajnością i zwiększoną produktywnością. Sama nazwa oznacza w wolnym tłumaczeniu ``spis widoczny``.\cite{kanban}\\ Głównym elementem jest utworzenie torów, oznaczających poszczególne etapy w których znajdują się obecnie zadania. W momencie zmiany stanu, dany element jest przemieszczany do nastepnej w kolejności kolumny.\\
+Korzystając z faktu, że w serwisie Github możliwe jest utworzenie takiej kanbanowej tablicy, zdecydowano się na użycie właśnie tej implementacji narzędzia. Poniżej zaprezentowano stan części planszy podczas rozwoju projektu.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{kanban.png}
+	\caption{Kanbanowa tablica podzielona na 3 sektory}
+\end{figure}
 
 %---------------------------------------------------------------------------
 
 \section{Wybór technologii}
+
 
 %---------------------------------------------------------------------------
 
@@ -13,7 +33,7 @@ tutaj gadane jakiś ogólny opis i w ogóle cnie
 
 %---------------------------------------------------------------------------
 
-\section{Autoryzacja użytkownika w Allegro}
+\section{Autoryzacja użytkownika w Allegro API}
 
 Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego. Allegro udostępnia tzw. ``ścieżkę device flow``, dzięki której cały proces odbywa się bez konieczności uwzględniania go w interfejsie graficznym. Poniżej zaprezentowany jest diagram prezentujący tę funkcjonalność.\\
 
