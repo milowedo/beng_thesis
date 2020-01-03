@@ -2,11 +2,8 @@
 \babel@toc {polish}{}
 \contentsline {chapter}{\numberline {1}Wprowadzenie}{7}%
 \contentsline {section}{\numberline {1.1}Temat pracy}{7}%
-\contentsline {subsection}{\numberline {1.1.1}Stworzenie czegośtam}{7}%
 \contentsline {section}{\numberline {1.2}Cele pracy}{7}%
-\contentsline {subsection}{\numberline {1.2.1}Stworzenie czegośtam}{7}%
 \contentsline {section}{\numberline {1.3}Zawartość pracy}{7}%
-\contentsline {subsection}{\numberline {1.3.1}Zawiera cośtam}{7}%
 \contentsline {chapter}{\numberline {2}Projekt aplikacji}{9}%
 \contentsline {section}{\numberline {2.1}Architektura}{9}%
 \contentsline {subsection}{\numberline {2.1.1}Hypertext Transfer Protocol}{9}%
@@ -29,16 +26,16 @@
 \contentsline {section}{\numberline {3.1}Wybór technologii}{21}%
 \contentsline {section}{\numberline {3.2}Wielowątkowe tworzenie ofert}{21}%
 \contentsline {section}{\numberline {3.3}Autoryzacja użytkownika w Allegro}{21}%
-\contentsline {section}{\numberline {3.4}Elementy konifguracyjne}{21}%
-\contentsline {section}{\numberline {3.5}Wdrożenie}{21}%
-\contentsline {chapter}{\numberline {4}Interfejs}{23}%
-\contentsline {section}{\numberline {4.1}Logowanie i rejestracja}{23}%
-\contentsline {section}{\numberline {4.2}Wanted Screen}{23}%
-\contentsline {section}{\numberline {4.3}Logowanie i rejestracja}{23}%
-\contentsline {section}{\numberline {4.4}Logowanie i rejestracja}{23}%
-\contentsline {chapter}{\numberline {5}Podsumowanie}{25}%
-\contentsline {section}{\numberline {5.1}Wnioski}{25}%
-\contentsline {section}{\numberline {5.2}Możliwe rozszerzenia i usprawnienia}{25}%
+\contentsline {section}{\numberline {3.4}Wdrożenie}{23}%
+\contentsline {section}{\numberline {3.5}Elementy konifguracyjne}{23}%
+\contentsline {chapter}{\numberline {4}Interfejs}{25}%
+\contentsline {section}{\numberline {4.1}Logowanie i rejestracja}{25}%
+\contentsline {section}{\numberline {4.2}Wanted Screen}{25}%
+\contentsline {section}{\numberline {4.3}Logowanie i rejestracja}{25}%
+\contentsline {section}{\numberline {4.4}Logowanie i rejestracja}{25}%
+\contentsline {chapter}{\numberline {5}Podsumowanie}{27}%
+\contentsline {section}{\numberline {5.1}Wnioski}{27}%
+\contentsline {section}{\numberline {5.2}Możliwe rozszerzenia i usprawnienia}{27}%
 \babel@toc {polish}{}
 \babel@toc {polish}{}
 \babel@toc {english}{}

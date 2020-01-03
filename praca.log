@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  2 JAN 2020 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.28)  3 JAN 2020 11:38
 entering extended mode
 **c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
 (c:/Users/Millosz/Downloads/aghdpl-v3.1/praca.tex
@@ -1135,8 +1135,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 Rozdzia\l  1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
 ) [7
 
 
@@ -1160,6 +1158,8 @@ Underfull \hbox (badness 1205) in paragraph at lines 5--9
 \T1/ptm/m/n/12 nia u»yt-kow-nika usªug. S¡ one ele-men-tami opro-gra-mo-wa-nia zdol-nymi do nie-za-le»-nego
  []
 
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 10.
 
 Underfull \hbox (badness 3536) in paragraph at lines 11--13
 []\T1/ptm/m/n/12 HTTP, czyli ``Pro-to-kóª Prze-sy-ªa-nia Da-nych Hi-per-tek-sto-wych to pro-to-kóª war-stwy
@@ -1300,11 +1300,11 @@ Package pdftex.def Info: relations.png  used on input line 103.
 
 
 pdfTeX warning: pdflatex (file c:/Users/Millosz/Downloads/aghdpl-v3.1/nosql.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<nosql.pdf, id=70, 395.97937pt x 381.67593pt>
+<nosql.pdf, id=70, 395.97937pt x 395.97937pt>
 File: nosql.pdf Graphic file (type pdf)
 <use nosql.pdf>
 Package pdftex.def Info: nosql.pdf  used on input line 112.
-(pdftex.def)             Requested size: 455.24411pt x 438.80743pt.
+(pdftex.def)             Requested size: 455.24411pt x 455.2519pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1320,44 +1320,66 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Rozdzia\l  3.
-) [21]
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+<device_flow.png, id=91, 597.23125pt x 354.32375pt>
+File: device_flow.png Graphic file (type png)
+<use device_flow.png>
+Package pdftex.def Info: device_flow.png  used on input line 22.
+(pdftex.def)             Requested size: 455.24411pt x 270.089pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+<authorization.png, id=95, 517.935pt x 464.4853pt>
+File: authorization.png Graphic file (type png)
+<use authorization.png>
+Package pdftex.def Info: authorization.png  used on input line 36.
+(pdftex.def)             Requested size: 455.24411pt x 408.28056pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <c:/Users/Millosz/Downloads/aghdpl-v3.1/device_flow.png>]) [23 <c:/Users/Millosz/Downloads/aghdpl-v3.1/authorization.png>]
 \openout2 = `R5_interfejs.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.tex [22
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.tex [24
 
 
 
 ]
 Rozdzia\l  4.
-) [23]
+) [25]
 \openout2 = `R6_podsumowanie.aux'.
 
- (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.tex [24
+ (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.tex [26
 
 
 
 ]
 Rozdzia\l  5.
-) [25] [26
+) [27] [28
 
 
-] [27] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
+] [29] (c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.aux (c:/Users\Millosz\Downloads\aghdpl-v3.1\R1_wprowadzenie.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R3_projekt.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R4_implementacja.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R5_interfejs.aux) (c:/Users\Millosz\Downloads\aghdpl-v3.1\R6_podsumowanie.aux))
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28798 strings out of 492484
- 541401 string characters out of 3130430
+ 28810 strings out of 492484
+ 541631 string characters out of 3130430
  916108 words of memory out of 3000000
- 32765 multiletter control sequences out of 15000+200000
+ 32775 multiletter control sequences out of 15000+200000
  607088 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,71p,1495b,2764s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Millosz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (27 pages, 423571 bytes).
+Output written on c:/Users\Millosz\Downloads\aghdpl-v3.1\praca.pdf (29 pages, 470154 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
