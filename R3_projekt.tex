@@ -24,7 +24,7 @@ HTTP, czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warst
 \section{Auth service}
 Auth service dba o zachowanie bezpieczeństwa w całym systemie.
 Poprzez ekstrakcję funkcjonalności związanej z tworzeniem kont, logowaniem oraz zarządzaniem dostępem do pozostałych sektorów, gwarantuje niezawodną autentykację i autoryzację użytkownika pragnącego korzystać z aplikacji.\\
-Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. 
+Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. Same hasła użytkowników są przechowywane w postaci ciągu znaków powstałego po zastosowanniu do wejściowego napisu funkcji hashującej wraz z solą.
 \\
 W celu swobodnego poruszania się po aplikacji należy uzyskać JWT(\texttt{JSON Web Token}). Aby pozsykać token należy się zarejestrować lub zalogować na ekranie logowania. Zapytanie utworzone w ten sposób zostanie wysłane do Auth service. W odpowiedzi przesłany zostanie wyżej wymieniony klucz dostępowy.\\
 
