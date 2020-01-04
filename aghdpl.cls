@@ -18,7 +18,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}} 
 \ProcessOptions\LoadClass[a4paper,twoside,openright]{report} 
 
-\RequirePackage{times}
+\RequirePackage{mathptmx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
@@ -55,7 +55,6 @@
 \renewcommand{\labelitemi}{--}
 
 %------------------------------------------------------------------------------
-
 
 \def\thesisheaders{
 \fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitlePL}}
