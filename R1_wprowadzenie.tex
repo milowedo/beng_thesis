@@ -1,33 +1,43 @@
 \chapter{Wprowadzenie}
 \label{cha:wprowadzenie}
 
-Książki książki szukam ich i w ogóle
-
-Allegro to cośtam
-
-Ale problemem jest cośtam
-
+Poniższa praca prezentuje projekt i wykonanie systemu składającego się z kilku osobno rozwijanych serwisów połączonych w aplikacji mobilnej. Stawia on sobie na cel ułatwienie oraz usprawnienie kompletowania domowej bilbioteki.
 %---------------------------------------------------------------------------
 
 \section{Temat pracy}
 \label{sec:tematPracy}
 
-Tematem pracy jest aplikacja o charakterze mikroserwisowym czy co
+Tematem pracy jest aplikacja mobilna napisana w frameworku React Native, która deleguje potrzebne funkcjonalności do zewnętrznych serwisów. Jej architekturę określić można jako rozproszoną, stąd możliwym jest rozwijanie poszczególnych usług niezależnie od innych. Dzięki takiemu podejściu nie jest najważniejszym troska o zasoby platformy, a pojedyncze elementy struktury mogą być zaimplementowane w dowolnym języku.\\
+Sam system zajmuje się analizą dostępnych ofert książek na stronie Allegro.pl w celu optymalizacji zakupów użytkownika, którego celem jest wejście w posiadanie jak największej ilości poszukiwanych książek po możliwie najniższym koszcie.
 
+
+%---------------------------------------------------------------------------
+
+\section{Motywacja}
+\label{sec:motywacja}
+Pomysł na stworzenie tego typu aplikacji powstał podczas przeszukiwania serwisu Allegro.pl w celu znalezienia kilku książek. Problem jaki został napotkany polegał na tym, że w momencie skompletowania zestawu artykułów, okazało się, że ceny wysyłek znacząco podwyższają finalną cenę zamówienia. Najlepszym rozwiązaniem zdawało się znalezienie ofert jednego sprzedawcy, dzięki czemu za transport zapłaconoby raz. Niestety na wspomnianej platformie aukcyjnej użytkowników mających w swojej ofercie książki, jest dużo. Analizowanie wszystkich przedmiotów u wszystkich ich posiadaczy wymaga poważnej ilości czasu, którego poświęcenie mogłoby ostatecznie nie być opłacalne.\\
+Dostępne na rynku aplikacje nie realizują w sposób satysfakcjonujący funkcjonalności, które rozwiązywałyby napotkany problem.
 
 %---------------------------------------------------------------------------
 
 \section{Cele pracy}
 \label{sec:celePracy}
-
-
-Celem poniższej pracy jest 
-
+\begin{enumerate}
+    \item Przygotowanie schematu architektury systemu
+    \item Implementacja poszczególnych serwisów
+    \item Dostarczenie aplikacji umożliwiającej: 
+    \begin{itemize}
+        \item Bezpieczeństwo zasobów
+        \item Zapisywanie list książek w zewnętrznej bazie danych 
+        \item Asynchroniczne przeliczanie ofert
+        \item Wizualizacje danych
+        \item Płynność i optymalizacje w części mobilnej
+    \end{itemize}
+\end{enumerate}
 
 %---------------------------------------------------------------------------
 
 \section{Zawartość pracy}
 \label{sec:zawartoscPracy}
-
 
 %-------------------------------------

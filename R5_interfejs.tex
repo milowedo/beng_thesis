@@ -1,26 +1,69 @@
 \chapter{Interfejs}
 \label{cha:interfejs}
 
-No będe opisywał interfejs i ten tego
+Interfejs aplikacji składa się z trzech rodzielnych zbiorów ekranów. Każda nawigacja pomiędzy tymi grupami skutkuje usunięciem z pamięci, kolekcji ekranów znajdujących się w poprzedniej grupie oraz załadowaniem nowego zestawu.\\
+W pierwszym pakiecie znajdują się ekrany logowania i rejestracji. Jeżeli użytkownik się zaloguje lub zarejestruje, jego token dostępowy zostanie zapisany w pamięci podręcznej urządzenia i do momentu jej wyczyszczenia, program nie będzie wymagał od niego ponownego wpisywania swoich danych w celu autoryzacji. Co za tym idzie, w ogóle nie zaistnieje potrzeba załadowania tych widoków.
+Po autoryzacji użytkownik otrzymuje dostęp do drugiego i trzeciego zbioru zawierających :
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item biblioteki książek oraz widok z zaprezentowanymi ofertami
+    \item ustawienia
+\end{enumerate} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{navig.pdf}
+	\caption{Schemat nawigacji pomiędzy ekranami}
+\end{figure}
 %---------------------------------------------------------------------------
 
 \section{Logowanie i rejestracja}
+Te dwa ekrany zawierają formularze w których użytkownik może wpisać swój email oraz hasło. Po wpisaniu danych, akceptuje formularz niebieskim przyciskiem i w ten sposób tworzy zapytanie do Auth Service. W sytuacji, gdy wprowadzone dane są niewłaściwe, zostanie wyświetlony odpowiedni komunikat.\\
+Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zresetowanie formularza i przeniesienie do sąsiedniego widoku.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{signin_signup.pdf}
+	\caption{Ekrany logowania i rejestracji w aplikacji mobilnej}
+\end{figure}
+%---------------------------------------------------------------------------
+\section{Ekrany bibliotek}
+Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je sposób ich użycia. Obydwa zawierają listy, których jedynie widoczne elementy są renderowane. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z każdej strony, które można aktywować poprzez horyzontalne przesunięcie.
+
+\newpage
+Widok poszukiwanych książek prezentuje pozycje, które zadeklarowane były jako te, które mają być wysłane do serwisu OffersFetcher i użyte w celu stworzenia ofert.\\
+Na poniższej grafice widnieje funkcjonalność dodawania nowej pozycji do listy. Po naciśnięciu  obszaru z napisem ``new book``, wysunięty zostanie formularz, który poprawnie wypełniony poskutkuje dodaniem nowej książki i wysłaniem jej do bazy danych w chmurze. Cenę każdej pozycji można edytować po jej naciśnięciu - pojawi się pole do edytowania wartości.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{wanted.pdf}
+	\caption{Biblioteka poszukiwanych książek oraz dodawanie nowej pozycji}
+\end{figure}
+\newpage
+
+Poprzez przesunięcie pojedynczego elementu w lewo, pojawi się ukryty pod spodem przycisk, który służy do usunięcia danej książki z listy i bazy danych.\\ Jeżeli bloczek poruszony zostanie ruchem o przeciwnym zwrocie, użytkownik otrzyma możliwość edytowania informacji o danym tomie.\\
+Każde wychylenie elementu zostanie przywrócone do stanu wyjściowego w momencie poruszenia innego lub po 5 sekundach bezczynności.
+\begin{figure}[H]
+	\centering
+	\includegraphics{mylib.pdf}
+	\caption{Bilbioteka posiadanych książek oraz funkcjonalność usuwania}
+\end{figure}
+\newpage
 %---------------------------------------------------------------------------
 
-\section{WantedScreen}
+\section{Ekran z ofertami}
+To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher. Jest to przesuwalny wertykalnie komponent zawierający sprzedawców oraz ich produktów, bazująca na pozycjach z ekranu Wanted. Każdy element składa się z identyfikatora właściciela aukcji, następnie z listy książek, gdzie każdy obiekt to zdjęcie prezentujące produkt, tytuł, autor, a także jego cena. Na dole oferty wyświetlona jest sumaryczna cena tomów oraz najtańsza możliwa dostawa według kontrahenta.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{offers.pdf}
+	\caption{Ekran prezentujący oferty od sprzedawców}
+\end{figure}
+\newpage
 
-%---------------------------------------------------------------------------
-
-\section{LibraryScreen}
-
-%---------------------------------------------------------------------------
-
-\section{OffersScreen}
-
-%---------------------------------------------------------------------------
-
-\section{OptionsScreen}
-
-
+\section{Opcje}
+Obecnie dostępna jest tylko jedna opcja - mianowicie wylogowanie użytkownika. Po naciśnięciu przycisku, usunięty zostanie token, a aplikacja wykona przeniesienie do ekranu logowania.
+\begin{figure}[H]
+	\centering
+	\includegraphics{options.pdf}
+	\caption{Ekran opcji z możliwością wylogowania}
+\end{figure}
 
