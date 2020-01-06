@@ -35,7 +35,7 @@ Językami programowania, które maja największy udział w projekcie są Javascr
 Za persystencję odpowiada chmurowa wersja bazy danych NoSQL (2.6.2) - MongoDB Cloud.
 
 \subsection{Express}
-\textbf{Auth Service} oraz \textbf{Gateway} to serwisy o podobnym stosie technologicznym. Obydwa powstały z pomocą Express js API - javascriptowego frameworku wspierającego implementację serwera obsługującego tworzenie i wystawianie REST API.
+\textbf{Auth Service} (2.2) oraz \textbf{Gateway} (2.3) to serwisy o podobnym stosie technologicznym. Obydwa powstały z pomocą Express js API - javascriptowego frameworku wspierającego implementację serwera obsługującego tworzenie i wystawianie REST API.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{express_simple.pdf}
@@ -105,7 +105,7 @@ Powyższy kod prezentuje przebieg akcji, które mają miejsce za każdym razem, 
 %---------------------------------------------------------------------------
 \newpage
 \section{MongoDB Cloud}
-Modele przechowujące dane są zdefiniowane w klasach Book.js oraz User.js serwisów Gateway i Auth Service. Połączenie do bazy danych jest obsłużone przy pomocy bilbioteki \textit{mongoose}.\newline
+Modele przechowujące dane są zdefiniowane w klasach Book.js oraz User.js serwisów Gateway (2.3) i Auth Service (2.2). Połączenie do bazy danych jest obsłużone przy pomocy bilbioteki \textit{mongoose}.\newline
 W celu uzyskania dostępu potrzebny jest jedynie tak zwany \textit{connection string}, który uzyskany został poprzez zalogowanie się na stronie webowej serwisu hostującego cloud.mongodb.com i nawigację do zakładki Connect.
 \begin{figure}[H]
 	\centering
@@ -136,8 +136,8 @@ Minimalne środowisko jakie jest wymagane aby uruchomić system to:
 Wdrożenie wymagało dodatkowo stworzenia aplikacji w sensie logicznym według platformy Heroku. Odbyło się to za pomocą lini komend Heroku CLI oraz poprzez wskazanie adresu URI do stosownych repozytoriów Github, gdzie przetrzymywany jest kod.
 W ten sposób w webowym interfejsie pod adresem dashboard.heroku.com znalazły się odnośniki reprezentujące trzy usługi : OffersFetcher (2.4), Auth Service (2.2) oraz Gateway (2.3).\newline Każda z nich ma zdefiniowaną odpowiednią konfigurację, dzięki której aplikacje mogą zostać uruchomione.
 \begin{itemize}
-	\item {OffersFetcher uruchamiany jest na platformie poleceniem \textit{web java -jar build/libs/*.jar}}
-	\item {AuthService oraz Gateway - komendą \textit{npm start}}
+	\item {OffersFetcher (2.4) uruchamiany jest na platformie poleceniem \textit{web java -jar build/libs/*.jar}}
+	\item {AuthService (2.2) oraz Gateway (2.3) - komendą \textit{npm start}}
 \end{itemize}
 
 Serwis reprezentujący bazę danych nie potrzebował bezpośredniego wdrożenia w postaci umieszczenia w konkretnym miejscu, napisanego wcześniej kodu. Cały proces uruchomienia bazy danych został wykonany za pomocą webowego intefejsu.

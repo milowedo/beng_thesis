@@ -19,7 +19,7 @@ Po autoryzacji użytkownik otrzymuje dostęp do drugiego i trzeciego zbioru zawi
 %---------------------------------------------------------------------------
 
 \section{Logowanie i rejestracja}
-Te dwa ekrany zawierają formularze w których użytkownik może wpisać email oraz hasło. Po wpisaniu danych, akceptuje formularz niebieskim przyciskiem i tworzy zapytanie do Auth Service. W sytuacji, gdy wprowadzone dane są niewłaściwe, zostanie wyświetlony odpowiedni komunikat.
+Te dwa ekrany zawierają formularze w których użytkownik może wpisać email oraz hasło. Po wpisaniu danych, akceptuje formularz niebieskim przyciskiem i tworzy zapytanie do Auth Service (2.2). W sytuacji, gdy wprowadzone dane są niewłaściwe, zostanie wyświetlony odpowiedni komunikat.
 Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zresetowanie formularza i przeniesienie do sąsiedniego widoku.
 
 \begin{figure}[H]
@@ -33,7 +33,7 @@ Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zreseto
 Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je natomiast sposób oraz cel ich użycia. Obydwa zawierają listy(rodzaj komponentu), których jedynie widoczne elementy są renderowane, aby nie spowalniać pracy aplikacji. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z lewej i prawej strony, które można aktywować poprzez horyzontalne przesunięcie wykonane na pojedynczym segmencie.
 
 
-Widok poszukiwanych książek prezentuje pozycje, które będą wysłane do serwisu OffersFetcher  i użyte w celu stworzenia ofert.
+Widok poszukiwanych książek prezentuje pozycje, które będą wysłane do serwisu OffersFetcher (2.4)  i użyte w celu stworzenia ofert.
 Na poniższej grafice widnieje funkcjonalność dodawania nowej pozycji do listy. Po naciśnięciu  obszaru z napisem ``new book``, wysunięty zostanie formularz, który poprawnie wypełniony poskutkuje dodaniem nowej książki i wysłaniem jej do bazy danych w chmurze. Cenę każdej pozycji można edytować po jej naciśnięciu - pojawi się pole do edytowania wartości.
 \begin{figure}[H]
 	\centering
@@ -55,7 +55,7 @@ Każde wychylenie elementu zostanie przywrócone do stanu wyjściowego w momenci
 %---------------------------------------------------------------------------
 
 \section{Ekran z ofertami}
-To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher. Jest to przesuwalny wertykalnie komponent zawierający sprzedawców oraz ich produkty, na bazie pozycji z ekranu Wanted. Każdy element składa się z identyfikatora właściciela aukcji, następnie z listy książek, gdzie każdy obiekt to zdjęcie prezentujące produkt, tytuł, autor, a także jego cenę. Na dole oferty wyświetlona jest sumaryczna cena tomów oraz najtańsza możliwa dostawa według kontrahenta.
+To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher (2.4). Jest to przesuwalny wertykalnie komponent zawierający sprzedawców oraz ich produkty, na bazie pozycji z ekranu Wanted. Każdy element składa się z identyfikatora właściciela aukcji, następnie z listy książek, gdzie każdy obiekt to zdjęcie prezentujące produkt, tytuł, autor, a także jego cenę. Na dole oferty wyświetlona jest sumaryczna cena tomów oraz najtańsza możliwa dostawa według kontrahenta.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{offers.pdf}

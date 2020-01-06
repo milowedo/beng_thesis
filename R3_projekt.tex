@@ -70,7 +70,7 @@ Jest to więc centralny punkt systemu, który ma na celu uproszczenie komunikacj
 \end{figure}
 
 \section{OffersFetcher}
-OffersFetcher to główna jednostka licząca w systemie. Usługa ta otrzymuje żądanie z listą książek oraz token dostępowy do REST API portalu Allegro.pl (3.5.).
+OffersFetcher to główna jednostka licząca w systemie. Usługa ta otrzymuje żądanie z listą książek oraz token dostępowy do REST API portalu Allegro.pl (2.5).
 Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, którego rezultat jest przetwarzany i odkładany do odpowiedniej kolekcji, aby na koniec zostać wkomponowanym w wynikowy rezultat. Analizowane są wszystkie, obecnie dostępne w czasie rzeczywistym oferty sprzedaży w serwisie Allegro.pl. Dane otrzymane w ten sposób są przetwarzane i grupowane po unikalnym identyfikatorze sprzedawcy. Serwis zwraca odpowiedź w postaci listy zbiorów przedmiotów, które wpisują się w pozyzcje otrzymane w zapytaniu. W celu optymalizacji czasu w którym przygotowana zostaje odpowiedź, pobieranie danych oraz obliczenia wykonywane są asynchronicznie, co znacznie przyspiesza proces generowania wyników.
 \begin{figure}[H]
 	\centering
@@ -81,7 +81,7 @@ Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, któr
 
 \section{Zewnętrzne API}
 
-Źródłem danych dla ofert tworzonych w serwisie OffersFetcher (3.4.)
+Źródłem danych dla ofert tworzonych w serwisie OffersFetcher (2.4)
 jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcyjną on-line przedsiębiorstwa Allegro.pl. Portal ten umożliwa użytkownikom wystawianie na sprzedaż posiadanych przez nich przedmiotów oraz na korzystanie z ofert innych sprzedawców.  Początkowo innym, alternatywnym rozwiązaniem miało być pobieranie całych stron HTML po uprzednim sfabrykowaniu URI, tak aby pasowało do zadanej pozycji. Następnie taki plik tekstowy miałby być przeszukiwany wyrażeniami regularnymi w celu ekstrakcji szukanych informacji. Z racji jednak na dość niestabilny i zasobochłonny chrakter, wybrano korzystanie\\z gotowego źródła danych w postaci dostarczonego API.\newline
 ``Allegro REST API działa w oparciu o protokół HTTP (...) Autoryzacja realizowana jest w standardzie OAuth2.``~\cite{allegroApi}
 
@@ -96,7 +96,7 @@ jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcy
 \end{itemize}~\cite{fielding}
 
 \section{Baza danych}
-Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie przetrzymywać dane użytkowników aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest na przykład dla Auth service (3.2). Wykorzystuje on go ze względu na posiadane informacje, które używane są w celu autoryzacji i autentykacji.
+Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie przetrzymywać dane użytkowników aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest na przykład dla Auth service (2.2). Wykorzystuje on go ze względu na posiadane informacje, które używane są w celu autoryzacji i autentykacji.
 Oprócz danych dostępowych, dla każdego klienta przechowywane są również zbiory książek - posiadanych i poszukiwanych.\newline
 Istniejące aktualnie, złożone bazy danych można podzielić ze wględu na struktury organizacji danych jakie stosują do ich przechowywania. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL).
 
