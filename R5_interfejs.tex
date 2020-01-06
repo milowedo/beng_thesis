@@ -2,11 +2,11 @@
 \label{cha:interfejs}
 
 Interfejs aplikacji składa się z trzech rodzielnych zbiorów ekranów. Każda nawigacja pomiędzy tymi grupami skutkuje usunięciem z pamięci kolekcji ekranów, znajdujących się w poprzedniej grupie oraz załadowaniem nowego zestawu.
-W pierwszym pakiecie znajdują się ekrany logowania i rejestracji. Jeżeli użytkownik się zaloguje lub zarejestruje, jego token dostępowy zostanie zapisany w pamięci podręcznej urządzenia i do momentu jej wyczyszczenia, program nie będzie wymagał od niego ponownego wpisywania swoich danych w celu autoryzacji. Co za tym idzie, w ogóle nie zaistnieje potrzeba załadowania tych widoków.
+W pierwszym pakiecie znajdują ekrany logowania i rejestracji. Jeżeli użytkownik zaloguje się lub zarejestruje, jego token dostępowy zostanie zapisany w pamięci podręcznej urządzenia i do momentu jej wyczyszczenia, program nie będzie wymagał od niego ponownego wpisywania swoich danych w celu autoryzacji. Co za tym idzie, w ogóle nie zaistnieje potrzeba załadowania tych widoków.
 Po autoryzacji użytkownik otrzymuje dostęp do drugiego i trzeciego zbioru zawierających :
 \begin{enumerate}
     \setcounter{enumi}{1}
-    \item biblioteki książek oraz widok z zaprezentowanymi ofertami
+    \item dwie biblioteki oraz widok z zaprezentowanymi ofertami
     \item ustawienia
 \end{enumerate} 
 
@@ -30,10 +30,10 @@ Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zreseto
 \end{figure}
 %---------------------------------------------------------------------------
 \section{Ekrany bibliotek}
-Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je natomiast sposób oraz cel ich użycia. Obydwa zawierają listy, których jedynie widoczne elementy są renderowane. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z każdej strony, które można aktywować poprzez horyzontalne przesunięcie.
+Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je natomiast sposób oraz cel ich użycia. Obydwa zawierają listy(rodzaj komponentu), których jedynie widoczne elementy są renderowane, aby nie spowalniać pracy aplikacji. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z lewej i prawej strony, które można aktywować poprzez horyzontalne przesunięcie wykonane na pojedynczym segmencie.
 
 
-Widok poszukiwanych książek prezentuje pozycje, które będą wysłane do serwisu OffersFetcher i użyte w celu stworzenia ofert.
+Widok poszukiwanych książek prezentuje pozycje, które będą wysłane do serwisu OffersFetcher  i użyte w celu stworzenia ofert.
 Na poniższej grafice widnieje funkcjonalność dodawania nowej pozycji do listy. Po naciśnięciu  obszaru z napisem ``new book``, wysunięty zostanie formularz, który poprawnie wypełniony poskutkuje dodaniem nowej książki i wysłaniem jej do bazy danych w chmurze. Cenę każdej pozycji można edytować po jej naciśnięciu - pojawi się pole do edytowania wartości.
 \begin{figure}[H]
 	\centering
@@ -44,7 +44,7 @@ Na poniższej grafice widnieje funkcjonalność dodawania nowej pozycji do listy
 
 
 Poprzez przesunięcie pojedynczego elementu w lewo, pojawi się ukryty pod spodem przycisk, który służy do usunięcia danej książki z listy i bazy danych. Jeżeli bloczek poruszony zostanie ruchem o przeciwnym zwrocie, użytkownik otrzyma możliwość edytowania informacji o danym tomie.
-Każde wychylenie elementu zostanie przywrócone do stanu wyjściowego w momencie poruszenia innego lub po 5 sekundach bezczynności.
+Każde wychylenie elementu zostanie przywrócone do stanu wyjściowego w momencie poruszenia innej pozycji lub po 5 sekundach bezczynności.
 \begin{figure}[H]
 	\centering
 	\includegraphics{mylib.pdf}
@@ -63,9 +63,9 @@ To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher. J
 	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 
-
+\newpage
 \section{Opcje}
-Obecnie dostępna jest tylko jedna opcja - mianowicie wylogowanie użytkownika. Po naciśnięciu przycisku, usunięty zostanie token dostępowy, a aplikacja wykona przeniesienie do ekranu logowania.
+Obecnie na ekranie opcji, który można wywołać po naciśnięciu przycisku w prawym górnym rogu, dostępna jest tylko jedna opcja - mianowicie wylogowanie użytkownika. Po naciśnięciu przycisku, usunięty zostanie token dostępowy, a aplikacja wykona przeniesienie do ekranu logowania.
 \begin{figure}[H]
 	\centering
 	\includegraphics{options.pdf}
