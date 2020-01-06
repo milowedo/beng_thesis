@@ -19,8 +19,8 @@ Korzystając z faktu, że w serwisie Github możliwe jest utworzenie takiej kanb
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{kanban.pdf}
-	\caption{Kanbanowa tablica podzielona na 3 sektory}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Kanbanowa tablica podzielona na 3 sektory}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 
 %---------------------------------------------------------------------------
@@ -33,8 +33,8 @@ Językami programowania, które maja największy udział w projekcie są Javascr
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{express_simple.pdf}
-	\caption{Elementarny kod odpowiedzialny za wystawienie prostego API za pomocą Express js}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Elementarny kod odpowiedzialny za wystawienie prostego API za pomocą Express js}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 Jak przedstawiono powyżej, aby stworzyć nasłuchujący na jednym punkcie końcowym serwer, wystarczy parę linijek kodu. Naturalnie, potrzeby występujących w pracy serwisów są większe i potrzebują bardziej rozbudowane podejścia niż przedstawiono na załączonej grafice.
 
@@ -45,8 +45,8 @@ Przykładem zastosowania jest pobieranie książek (za pomocą funkcji fetchMyBo
 \begin{figure}[H]
 	\centering
 	\includegraphics{hook.pdf}
-	\caption{Zastosowanie hooka ``useEffect``}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Zastosowanie hooka ``useEffect``}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 Hook \textbf{useEffect} przyjmuje dwa argumenty, pierwszy to funkcja, która ma się wykonać przy inicjalizacji komponentu oraz za każdym razem kiedy element tablicy z drugiego argumentu ulegnie zmianie.
 
@@ -59,8 +59,8 @@ Dla każdej pozycji tworzone jest zadanie, które składa się z podzadań. Wszy
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{tasks.pdf}
-	\caption{Metoda wołana dla każdej książki z zapytania w serwisie OffersFetcher(2.4)}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Metoda wołana dla każdej książki z zapytania w serwisie OffersFetcher(2.4)}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 Na powyższej grafice widać główną logikę, odpowiedzialną za pobranie i zapisanie książek. Przyjmuje ona obiekt reprezentujący pojedynczą książkę otrzymaną w zapytaniu oraz mapę zawierającą sprzedawców i dotychczas dopasowane do nich poszukiwane pozycje, znajdujące się w ich ofercie.
 W pierwszej kolejności wywoływana jest metoda, która wysyła zapytanie typu GET do Allegro REST API, następnie, jeżeli podzadanie zostanie wykonane i  otrzymana zostanie odpowiedź, tekst jest parsowany kolejno do tablicy, a potem do listy obiektów typu JSON.
@@ -76,8 +76,8 @@ Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{device_flow.pdf}
-	\caption{Autoryzacja użytkownika typu Device flow}
-	\caption*{Źródło: {https://developer.allegro.pl/}}
+	\caption{\centering Autoryzacja użytkownika typu Device flow}
+	\caption*{\centering Źródło: {https://developer.allegro.pl/}}
 \end{figure}
 
 Podejście w tej pracy zakłada zarejestrowanie jednego, wspólnego dla całego systemu, konta funkcjonalnego za pomocą którego każde zapytanie będzie autentykowane. Stwarza to niestety jedno ograniczenie. Mianowicie, ze względu na obowiązujący główny limit nakładany na Client ID  - po przekroczeniu liczby 9000 zapytań na minutę, aplikacja zwróci kod błędu 429 i zostanie zabklokowana na kolejne 60 sekund.
@@ -90,8 +90,8 @@ Zostaną one zachowane w pamięci, a każde kolejne zapytanie, w przypadku wyga�
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{authorization.pdf}
-	\caption{Kod odpowiedzialny za utrzymywanie ważnego tokena}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Kod odpowiedzialny za utrzymywanie ważnego tokena}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 Powyższy kod prezentuje przebieg akcji, które maja miejsce za każdym razem, kiedy otrzymywane jest zapytanie do OffersService(2.4). Na początku sprawdzane jest, czy token jest zwyczajnie aktualny, następnie, w przypadku, gdy nie jest, pobierany jest token odświeżający. W zależności od tego, czy jest on ważny, wygaśnięty, czy może w ogóle nigdy nie został uzyskany, odpowiednia logika zostaje uruchomiona.
 
@@ -104,8 +104,8 @@ oraz Book.js. Połączenie do bazy danych jest obsłużone przy pomocy bilbiotek
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{mongo.pdf}
-	\caption{Połączenie do bazy danych MongoDB}
-	\caption*{Źródło: {Opracowanie własne}}
+	\caption{\centering Połączenie do bazy danych MongoDB}
+	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 W załączonej grafice widać rozpoczęcie połączenia z bazą danych. Ważnym elementem jest opcja \textbf{useCreateIndex}, dzięki której znajdujące się w serwisach Auth Service i Gateway, modele, otrzymają indeksy pod którymi znaleźć będzie można zapisane dokumenty. 
 
