@@ -1,7 +1,7 @@
 \chapter{Interfejs}
 \label{cha:interfejs}
 
-Interfejs aplikacji składa się z trzech rodzielnych zbiorów ekranów. Każda nawigacja pomiędzy tymi grupami skutkuje usunięciem z pamięci, kolekcji ekranów znajdujących się w poprzedniej grupie oraz załadowaniem nowego zestawu.\\
+Interfejs aplikacji składa się z trzech rodzielnych zbiorów ekranów. Każda nawigacja pomiędzy tymi grupami skutkuje usunięciem z pamięci kolekcji ekranów, znajdujących się \\w poprzedniej grupie oraz załadowaniem nowego zestawu.\\
 W pierwszym pakiecie znajdują się ekrany logowania i rejestracji. Jeżeli użytkownik się zaloguje lub zarejestruje, jego token dostępowy zostanie zapisany w pamięci podręcznej urządzenia i do momentu jej wyczyszczenia, program nie będzie wymagał od niego ponownego wpisywania swoich danych w celu autoryzacji. Co za tym idzie, w ogóle nie zaistnieje potrzeba załadowania tych widoków.
 Po autoryzacji użytkownik otrzymuje dostęp do drugiego i trzeciego zbioru zawierających :
 \begin{enumerate}
@@ -18,8 +18,8 @@ Po autoryzacji użytkownik otrzymuje dostęp do drugiego i trzeciego zbioru zawi
 %---------------------------------------------------------------------------
 
 \section{Logowanie i rejestracja}
-Te dwa ekrany zawierają formularze w których użytkownik może wpisać swój email oraz hasło. Po wpisaniu danych, akceptuje formularz niebieskim przyciskiem i w ten sposób tworzy zapytanie do Auth Service. W sytuacji, gdy wprowadzone dane są niewłaściwe, zostanie wyświetlony odpowiedni komunikat.\\
-Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zresetowanie formularza i przeniesienie do sąsiedniego widoku.
+Te dwa ekrany zawierają formularze w których użytkownik może wpisać email oraz hasło. Po wpisaniu danych, akceptuje formularz niebieskim przyciskiem i tworzy zapytanie do Auth Service. W sytuacji, gdy wprowadzone dane są niewłaściwe, zostanie wyświetlony odpowiedni komunikat.\\
+Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zresetowanie formularza\\ i przeniesienie do sąsiedniego widoku.
 
 \begin{figure}[H]
 	\centering
@@ -28,10 +28,10 @@ Na dole ekranu widnieje krótki tekst, po którego kliknięciu, nastąpi zreseto
 \end{figure}
 %---------------------------------------------------------------------------
 \section{Ekrany bibliotek}
-Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je sposób ich użycia. Obydwa zawierają listy, których jedynie widoczne elementy są renderowane. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z każdej strony, które można aktywować poprzez horyzontalne przesunięcie.
+Widoki \textit{Wanted} i \textit{My library} korzystają w większości z tych samych komponentów, różni je natomiast sposób oraz cel ich użycia. Obydwa zawierają listy, których jedynie widoczne elementy są renderowane. Można je przesuwać werykalnie, a każdy element posiada ukryte opcje z każdej strony, które można aktywować poprzez horyzontalne przesunięcie.
 
 \newpage
-Widok poszukiwanych książek prezentuje pozycje, które zadeklarowane były jako te, które mają być wysłane do serwisu OffersFetcher i użyte w celu stworzenia ofert.\\
+Widok poszukiwanych książek prezentuje pozycje, które będą wysłane do serwisu OffersFetcher i użyte w celu stworzenia ofert.\\
 Na poniższej grafice widnieje funkcjonalność dodawania nowej pozycji do listy. Po naciśnięciu  obszaru z napisem ``new book``, wysunięty zostanie formularz, który poprawnie wypełniony poskutkuje dodaniem nowej książki i wysłaniem jej do bazy danych w chmurze. Cenę każdej pozycji można edytować po jej naciśnięciu - pojawi się pole do edytowania wartości.
 \begin{figure}[H]
 	\centering
@@ -51,7 +51,7 @@ Każde wychylenie elementu zostanie przywrócone do stanu wyjściowego w momenci
 %---------------------------------------------------------------------------
 
 \section{Ekran z ofertami}
-To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher. Jest to przesuwalny wertykalnie komponent zawierający sprzedawców oraz ich produktów, bazująca na pozycjach z ekranu Wanted. Każdy element składa się z identyfikatora właściciela aukcji, następnie z listy książek, gdzie każdy obiekt to zdjęcie prezentujące produkt, tytuł, autor, a także jego cena. Na dole oferty wyświetlona jest sumaryczna cena tomów oraz najtańsza możliwa dostawa według kontrahenta.
+To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher.\\ Jest to przesuwalny wertykalnie komponent zawierający sprzedawców oraz ich produkty, na bazie pozycji z ekranu Wanted. Każdy element składa się z identyfikatora właściciela aukcji, następnie z listy książek, gdzie każdy obiekt to zdjęcie prezentujące produkt, tytuł, autor, a także jego cenę. Na dole oferty wyświetlona jest sumaryczna cena tomów oraz najtańsza możliwa dostawa według kontrahenta.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{offers.pdf}
@@ -60,7 +60,7 @@ To tutaj zaprezentowane są wyniki analiz wykonanych w serwisie OffersFetcher. J
 \newpage
 
 \section{Opcje}
-Obecnie dostępna jest tylko jedna opcja - mianowicie wylogowanie użytkownika. Po naciśnięciu przycisku, usunięty zostanie token, a aplikacja wykona przeniesienie do ekranu logowania.
+Obecnie dostępna jest tylko jedna opcja - mianowicie wylogowanie użytkownika. Po naciśnięciu przycisku, usunięty zostanie token dostępowy, a aplikacja wykona przeniesienie\\ do ekranu logowania.
 \begin{figure}[H]
 	\centering
 	\includegraphics{options.pdf}
