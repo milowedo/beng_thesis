@@ -31,8 +31,8 @@ Korzystając z faktu, że w serwisie Github możliwe jest utworzenie takiej kanb
 %---------------------------------------------------------------------------
 \newpage
 \section{Wybór technologii}
-Językami programowania, które maja największy udział w projekcie są Javascript(2.2, 2.3, 2.7) oraz Java(2.4).\newline
-Za persystencję odpowiada chmurowa wersja bazy danych NoSQL(2.6.2) - MongoDB Cloud.
+Językami programowania, które maja największy udział w projekcie są Javascript (2.2, 2.3, 2.7) oraz Java (2.4).\newline
+Za persystencję odpowiada chmurowa wersja bazy danych NoSQL (2.6.2) - MongoDB Cloud.
 
 \subsection{Express}
 \textbf{Auth Service} oraz \textbf{Gateway} to serwisy o podobnym stosie technologicznym. Obydwa powstały z pomocą Express js API - javascriptowego frameworku wspierającego implementację serwera obsługującego tworzenie i wystawianie REST API.
@@ -62,12 +62,12 @@ Na powyższej grafice widać, że Hook \textbf{useEffect} przyjmuje dwa argument
 
 \section{Wielowątkowe tworzenie ofert}
 Mając na uwadze fakt, że użytkownicy aplikacji mobilnej byliby najprawdopodobniej dużo mniej zadwoleni, jeżeli musieliby długo czekać na rezultat analizy ofert książek, zdecydowano się zwrócić szczególną uwagę na optymalizacje tego czasochłonnego procesu.
-Serwis OffersFetcher(2.4) jest aplikacją napisaną w frameworku Spring Boot. Przyjmując zapytanie w postaci listy książek, zwraca przygotowane oferty bazując na aktualnych\\w czasie rzeczywistym aukcjach na platformie Allegro.pl\newline
+Serwis OffersFetcher (2.4) jest aplikacją napisaną w frameworku Spring Boot. Przyjmując zapytanie w postaci listy książek, zwraca przygotowane oferty bazując na aktualnych\\w czasie rzeczywistym aukcjach na platformie Allegro.pl\newline
 Dla każdej pozycji tworzone jest zadanie, które składa się następnie z podzadań. Wszystkie podzadania wykonywane są asynchronicznie i podzielone są w ten sposób, aby maksymalnie ograniczyć czas, w którym zasoby maszyny nie są wykorzystywane z powodu chociażby oczekiwania na odpowiedź z zewnętrznego serwisu Allegro.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{tasks.pdf}
-	\caption{\centering Metoda wołana dla każdej książki z zapytania w serwisie OffersFetcher(2.4)}
+	\caption{\centering Metoda wołana dla każdej książki z zapytania w serwisie OffersFetcher (2.4)}
 	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
 Na powyższej grafice widać główną logikę, odpowiedzialną za pobranie i zapisanie książek w wynikowej kolekcji. Jako argumenty, metoda przyjmuje obiekt reprezentujący pojedynczą książkę otrzymaną w zapytaniu oraz mapę zawierającą sprzedawców i do tej pory dopasowane do nich poszukiwane pozycje, znajdujące się w ich ofercie.
