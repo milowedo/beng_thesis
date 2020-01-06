@@ -18,8 +18,9 @@ W projekcie korzystano z hostingu na platformie GitHub.
 Korzystając z faktu, że w serwisie Github możliwe jest utworzenie takiej kanbanowej tablicy, zdecydowano się na użycie właśnie tej implementacji narzędzia. Poniżej zaprezentowano stan części planszy podczas rozwoju projektu.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{kanban.png}
+	\includegraphics[width=\linewidth]{kanban.pdf}
 	\caption{Kanbanowa tablica podzielona na 3 sektory}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 
 %---------------------------------------------------------------------------
@@ -31,8 +32,9 @@ Językami programowania, które maja największy udział w projekcie są Javascr
 \textbf{Auth Service} oraz \textbf{Gateway} to serwisy o podobnym stosie technologicznym. Obydwa powstały z pomocą Express js API - javascriptowego frameworku wspierającego implementację serwera obsługującego tworzenie i wystawianie REST API.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{express_simple.png}
+	\includegraphics[width=\linewidth]{express_simple.pdf}
 	\caption{Elementarny kod odpowiedzialny za wystawienie prostego API za pomocą Express js}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 Jak przedstawiono powyżej, aby stworzyć nasłuchujący na jednym punkcie końcowym serwer, wystarczy parę linijek kodu. Naturalnie, potrzeby występujących w pracy serwisów są większe i potrzebują bardziej rozbudowane podejścia niż przedstawiono na załączonej grafice.
 
@@ -42,8 +44,9 @@ Ciekawym rozwiązaniem zaprezentowanym przez twórców są tak zwane Hooki, któ
 Przykładem zastosowania jest pobieranie książek (za pomocą funkcji fetchMyBooks()) z bazy danych - wywołanie to potrzebne jest jedynie raz, podczas pierwszego ładowania ekranu MyLibraryScreen. Nie jest pożądanym wysyłać zapytania za każdym razem, kiedy użytkownik powróci do tego samego punktu i tracić zasoby urządzenia - dane są już i tak obecne w pamięci podręcznej. 
 \begin{figure}[H]
 	\centering
-	\includegraphics{hook.png}
+	\includegraphics{hook.pdf}
 	\caption{Zastosowanie hooka ``useEffect``}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 Hook \textbf{useEffect} przyjmuje dwa argumenty, pierwszy to funkcja, która ma się wykonać przy inicjalizacji komponentu oraz za każdym razem kiedy element tablicy z drugiego argumentu ulegnie zmianie.
 
@@ -55,8 +58,9 @@ Serwis OffersFetcher(2.4) jest aplikacją napisaną w frameworku Spring Boot. Pr
 Dla każdej pozycji tworzone jest zadanie, które składa się z podzadań. Wszystkie podzadania wykonywane są asynchronicznie i podzielone są w ten sposób, aby maksymalnie ograniczyć czas, w którym zasoby maszyny nie są wykorzystywane z powodu np oczekiwania na odpowiedź z zewnętrznego serwisu Allegro.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{tasks.png}
+	\includegraphics[width=\linewidth]{tasks.pdf}
 	\caption{Metoda wołana dla każdej książki z zapytania w serwisie OffersFetcher(2.4)}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 Na powyższej grafice widać główną logikę, odpowiedzialną za pobranie i zapisanie książek. Przyjmuje ona obiekt reprezentujący pojedynczą książkę otrzymaną w zapytaniu oraz mapę zawierającą sprzedawców i dotychczas dopasowane do nich poszukiwane pozycje, znajdujące się w ich ofercie.
 W pierwszej kolejności wywoływana jest metoda, która wysyła zapytanie typu GET do Allegro REST API, następnie, jeżeli podzadanie zostanie wykonane i  otrzymana zostanie odpowiedź, tekst jest parsowany kolejno do tablicy, a potem do listy obiektów typu JSON.
@@ -71,7 +75,7 @@ Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{device_flow.png}
+	\includegraphics[width=\linewidth]{device_flow.pdf}
 	\caption{Autoryzacja użytkownika typu Device flow}
 	\caption*{Źródło: {https://developer.allegro.pl/}}
 \end{figure}
@@ -85,8 +89,9 @@ W fazie inicjalizacyjnej autoryzacji uzyskane zostaną dwa unikalne tokeny:
 Zostaną one zachowane w pamięci, a każde kolejne zapytanie, w przypadku wygaśnięcia tokenu dostępowego, spowoduje jego odnowienie.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{authorization.png}
+	\includegraphics[width=\linewidth]{authorization.pdf}
 	\caption{Kod odpowiedzialny za utrzymywanie ważnego tokena}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 Powyższy kod prezentuje przebieg akcji, które maja miejsce za każdym razem, kiedy otrzymywane jest zapytanie do OffersService(2.4). Na początku sprawdzane jest, czy token jest zwyczajnie aktualny, następnie, w przypadku, gdy nie jest, pobierany jest token odświeżający. W zależności od tego, czy jest on ważny, wygaśnięty, czy może w ogóle nigdy nie został uzyskany, odpowiednia logika zostaje uruchomiona.
 
@@ -98,8 +103,9 @@ Modele przechowujące dane są zdefiniowane w klasach User.js i
 oraz Book.js. Połączenie do bazy danych jest obsłużone przy pomocy bilbioteki ``mongoose``. W celu uzyskania dostępu potrzebny jest jedynie connection string, który uzyskany został poprzez zalogowanie się na stronie webowej serwisu hostującego cloud.mongodb.com i nawigację do zakładki Connect.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{mongo.png}
+	\includegraphics[width=\linewidth]{mongo.pdf}
 	\caption{Połączenie do bazy danych MongoDB}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 W załączonej grafice widać rozpoczęcie połączenia z bazą danych. Ważnym elementem jest opcja \textbf{useCreateIndex}, dzięki której znajdujące się w serwisach Auth Service i Gateway, modele, otrzymają indeksy pod którymi znaleźć będzie można zapisane dokumenty. 
 

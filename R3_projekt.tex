@@ -12,8 +12,9 @@ HTTP, czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warst
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{architecture_overview.png}
+	\includegraphics[width=\linewidth]{architecture_overview.pdf}
 	\caption{Struktura systemu}
+	\caption*{Źródło: {Opracowanie własne z użyciem narzędzia \url{https://www.draw.io/}}}
 \end{figure}
 
 \section{Auth service}
@@ -44,8 +45,9 @@ JSON Web Token to otwarty standard, który definiuje kompaktowy i samodzielny sp
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\linewidth]{json-token.png}
+		\includegraphics[width=\linewidth]{json-token.pdf}
 		\caption{Przykładowy token jwt~\cite{jwt}}
+		\caption*{Źródło: \url{https://jwt.io/introduction/}}
 	\end{figure}
 
 \subsection{Autoryzacja, a autentykacja}
@@ -61,8 +63,9 @@ Gateway to serwis zbudowany według podejścia zwanego \texttt{wzorcem bramy int
 Jest to więc centralny punkt systemu, który ma na celu uproszczenie komunikacji warstwy prezentacyjnej z poszczególnymi usługami. Każde zapytanie wysłane do bramy zostaje zweryfikowane pod względem bezpieczeństwa. Następnie w zależności od potrzeb, modyfikowane, lub bezpośrednio przesłane dalej.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{gateway.png}
+	\includegraphics[width=\linewidth]{gateway.pdf}
 	\caption{Gateway - schemat}
+	\caption*{Źródło: {Opracowanie własne z użyciem narzędzia \url{https://www.draw.io/}}}
 \end{figure}
 
 \section{OffersFetcher}
@@ -72,6 +75,7 @@ Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, któr
 	\centering
 	\includegraphics[width=\linewidth]{booksToOffers.pdf}
 	\caption{Poszukiwane książki i bazująca na nich przykładowa oferta}
+	\caption*{Źródło: {Opracowanie własne}}
 \end{figure}
 
 \section{Zewnętrzne API}
@@ -99,9 +103,9 @@ Istniejące aktualeni, złożone bazy danych można podzielić ze wględu na str
 Najczęściej spotykane są nadal bazy relacyjne, gdzie dane występują pod postacią powiązanych wzajemnie ze sobą tabel. Posiadają one wewnętrzne języki programowania, wykorzystujące zwykle język SQL, służące do wykonywania zaawansowanych operacji.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{relations.png}
+	\includegraphics[width=\linewidth]{relations.pdf}
 	\caption{Przykład dwóch tabel i relacji pomiędzy nimi}
-	\caption*{Źródło: {code.tutsplus.com}}
+	\caption*{Źródło: \url{code.tutsplus.com}}
 \end{figure}
 
 \subsection{Bazy nierelacyjne}
@@ -110,6 +114,7 @@ Sporą popularność jednak zyskują ostatnio bazy nierelacyjne, czyli takie, kt
 	\centering
 	\includegraphics[width=\linewidth]{nosql.pdf}
 	\caption{Przykład obiektu json w bazie NoSQL przechowującej dane jako dokumenty}
+	\caption*{Źródło: {Opracowanie własne z użyciem fragmentu grafiki ze strony \url{https://medium.com}}}
 \end{figure}
 
 \subsection{Porównanie}
