@@ -1,12 +1,8 @@
 \chapter{Projekt aplikacji}
-W rozdziale tym zawarte są informacje o architekturze projektowanego systemu. Jego złożona charakterystyka rozłożona została na części bardziej elementarne w celu przedstawienia istoty rozwiązania problemu jaki stawia sobie niniejsza praca.
-
+W rozdziale tym zawarte są informacje o architekturze projektowanego systemu. Jego złożona budowa rozłożona została na części bardziej elementarne w celu przedstawienia istoty rozwiązania problemu jaki stawia sobie niniejsza praca.
 \section{Architektura}
-
-Architektura aplikacji złożona jest z części mobilnej oraz czterech serwisów, z czego każdy występuje jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. Warstwa prezentacyjna, porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi płynną interakcję z systemem w celu osiągnięcia zamierzonych akcji, dostępnych w obrębie funkcjonalności. W ten sposób każda składowa część aplikacji może być niezależnie zarządzana. W momencie w którym, pojedynczy element odpowiedzialny za konkretną usługę jest wyłączony, sama aplikacja może dalej działać wyłączając tylko funkcjonalności dostarczane przez niedostępny aktualnie serwis.
-
+Architektura aplikacji składa się z części mobilnej oraz czterech serwisów, z czego każdy występuje jako autonomiczna aplikacja z którą porozumiewanie odbywa się za pomocą protokołu HTTP. Warstwa prezentacyjna, porozumiewając się z pozostałymi serwisami zapewnia użytkownikowi płynną interakcję z systemem. Dzięki takiej strukturze każda składowa część aplikacji może być niezależnie zarządzana. W sytuacji w której, pojedyncza usługa jest wyłączona, sama aplikacja może dalej działać, brak jej będzie jedynie funkcjonalności niedostępnego aktualnie serwisu.\\
 Takie podejście można określić mianem zorientowanym na usługi. Oznacza to, że przy tworzeniu systemu, spory nacisk kładziony jest na definiowanie rozdzielnych usług. Mają one za zadanie spełniać określone wymagania użytkownika. Takie usługi są elementami oprogramowania zdolnymi do niezależnego funkcjonowania. Udostępniają realizowane funkcje poprzez zdefiniowany interfejs.
-
 \subsection{Hypertext Transfer Protocol}
 HTTP, czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warstwy aplikacji, odpowiedzialny za transmisję dokumentów hipermedialnych, jak np. HTML. Został stworzony do komunikacji pomiędzy przeglądarkami, a serwerami webowymi, ale może być używany również w innych celach. HTTP opiera się na klasycznym modelu klient-serwer, gdzie klient inicjuje połączenie poprzez wysłanie żądania, następnie czeka na odpowiedź. HTTP jest protokołem bezstanowym, co oznacza, że serwer nie przechowuje żadnych danych (stanów) pomiędzy obydwoma żądaniami. (...)``~~\cite{http}
 
@@ -71,7 +67,7 @@ Jest to więc centralny punkt systemu, który ma na celu uproszczenie komunikacj
 
 \section{OffersFetcher}
 OffersFetcher to główna jednostka licząca w systemie. Usługa ta otrzymuje żądanie z listą książek oraz token dostępowy do REST API portalu Allegro.pl (2.5).
-Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, którego rezultat jest przetwarzany i odkładany do odpowiedniej kolekcji, aby na koniec zostać wkomponowanym w wynikowy rezultat. Analizowane są wszystkie, obecnie dostępne w czasie rzeczywistym oferty sprzedaży w serwisie Allegro.pl. Dane otrzymane w ten sposób są przetwarzane i grupowane po unikalnym identyfikatorze sprzedawcy. Serwis zwraca odpowiedź w postaci listy zbiorów przedmiotów, które wpisują się w pozyzcje otrzymane w zapytaniu. W celu optymalizacji czasu w którym przygotowana zostaje odpowiedź, pobieranie danych oraz obliczenia wykonywane są asynchronicznie, co znacznie przyspiesza proces generowania wyników.
+Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, którego rezultat jest przetwarzany i odkładany do kolekcji, aby na koniec zostać wkomponowanym w wynikowy rezultat. Analizowane są wszystkie, obecnie dostępne w czasie rzeczywistym oferty sprzedaży w serwisie Allegro.pl. Dane otrzymane w ten sposób są przetwarzane i grupowane po unikalnym identyfikatorze sprzedawcy. Serwis zwraca odpowiedź w postaci listy zbiorów przedmiotów, które wpisują się w pozyzcje otrzymane w zapytaniu. W celu optymalizacji czasu w którym przygotowana zostaje odpowiedź, pobieranie danych oraz obliczenia wykonywane są asynchronicznie, co znacznie przyspiesza proces generowania wyników.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{booksToOffers.pdf}
