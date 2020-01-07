@@ -17,7 +17,7 @@ HTTP, czyli ``Protokół Przesyłania Danych Hipertekstowych to protokół warst
 \section{Auth service}
 Auth service dba o zachowanie bezpieczeństwa w całym systemie.
 Poprzez ekstrakcję funkcjonalności związanej z tworzeniem kont, logowaniem oraz zarządzaniem dostępem do pozostałych sektorów, dostarcza możliwość autentykacji i autoryzacji użytkownika pragnącego korzystać z aplikacji.
-Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. Same hasła użytkowników są przechowywane w postaci ciągu znaków powstałego po zastosowanniu do wejściowego napisu funkcji hashującej, czyli algorytmu szyfrującego jednostronnie.
+Informacje o kontach użytkowników przechowywane są w bazie danych, do której dostęp uzyskać można tylko za pomocą wygenerowanego przez nią, wewnętrznego klucza. Same hasła użytkowników są przechowywane w postaci ciągu znaków powstałego po zastosowaniu do wejściowego napisu funkcji hashującej, czyli algorytmu szyfrującego jednostronnie.
 
 W celu swobodnego użytkowania aplikacji należy uzyskać JWT(\texttt{JSON Web Token}). Aby pozyskać token należy się zarejestrować lub zalogować w aplikacji mobilnej. Zapytanie utworzone w ten sposób zostanie wysłane do Auth service. W odpowiedzi na nie, przesłany zostanie wyżej wymieniony klucz dostępowy.
 
@@ -51,7 +51,7 @@ JSON Web Token to otwarty standard, który definiuje kompaktowy i samodzielny sp
 
 Warto implicite rozróżnić dwa bardzo ważne pojęcia związane z bezpieczeństwem aplikacji.
 
-\textbf{Autentykacja}, często też rozważana w dwóch kolejnych częściach składowych - jako identyfikacja i uwierzytelnienie. Polega na potwierdzeniu tożsamości, to znaczy określeniu, czy podmiot procesu jest tym za kogo się podaje. Na przypadku logowania: strona ufająca otrzymuje od użytkownika login i hasło. Na tej podstawie stwierdza, czy użytkownik może być pozytywnie zweryfikowany.
+\textbf{Autentykacja}, często też rozważana w dwóch kolejnych częściach składowych - jako identyfikacja i uwierzytelnienie. Polega na potwierdzeniu tożsamości, to znaczy określeniu, czy podmiot procesu jest tym za kogo się podaje. W przypadku logowania: strona ufająca otrzymuje od użytkownika login i hasło. Na tej podstawie stwierdza, czy użytkownik może być pozytywnie zweryfikowany.
 
 \textbf{Autoryzacja} to potwierdzenie, czy dany użytkownik jest uprawniony do skorzystania z konkretnego zasobu. Na tym etapie autentykacja została ewaluowana pozytywnie. Nie oznacza to jednak, że dany podmiot posiada dostęp w żądanym zakresie. 
 
@@ -78,15 +78,15 @@ Dla każdej książki wykonywane jest odpowiednio zmodyfikowane zapytanie, któr
 \section{Zewnętrzne API}
 
 Źródłem danych dla ofert tworzonych w serwisie OffersFetcher (2.4)
-jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcyjną on-line przedsiębiorstwa Allegro.pl. Portal ten umożliwa użytkownikom wystawianie na sprzedaż posiadanych przez nich przedmiotów oraz na korzystanie z ofert innych sprzedawców.  Początkowo innym, alternatywnym rozwiązaniem miało być pobieranie całych stron HTML po uprzednim sfabrykowaniu URI, tak aby pasowało do zadanej pozycji. Następnie taki plik tekstowy miałby być przeszukiwany wyrażeniami regularnymi w celu ekstrakcji szukanych informacji. Z racji jednak na dość niestabilny i zasobochłonny chrakter, wybrano korzystanie\\z gotowego źródła danych w postaci dostarczonego API.\newline
+jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcyjną on-line przedsiębiorstwa Allegro.pl. Portal ten umożliwia użytkownikom wystawianie na sprzedaż posiadanych przez nich przedmiotów oraz na korzystanie z ofert innych sprzedawców.  Początkowo innym, alternatywnym rozwiązaniem miało być pobieranie całych stron HTML po uprzednim sfabrykowaniu URI, tak aby pasowało do zadanej pozycji. Następnie taki plik tekstowy miałby być przeszukiwany wyrażeniami regularnymi w celu ekstrakcji szukanych informacji. Z racji jednak na dość niestabilny i zasobochłonny charakter, wybrano korzystanie\\z gotowego źródła danych w postaci dostarczonego API.\newline
 ``Allegro REST API działa w oparciu o protokół HTTP (...) Autoryzacja realizowana jest w standardzie OAuth2.``~\cite{allegroApi}
 
 \subsection{REST API}
-(\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) to styl architektury oprogramowania w którym dane i funkcjonalności są odzwierciedlone poprzez Ujednolicone Identyfikatory Zasobów\\(w skrócie URI). Termin ten został stworzony przez Roya Fieldinga w 2000 roku. Dostęp uzyskiwany jest poprzez proste i jasno zdefiniowane operacje.  Istnieje pięc obowiązkowych ograniczeń, które dokładnie definiują charakter tego podejścia:
+(\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) to styl architektury oprogramowania w którym dane i funkcjonalności są odzwierciedlone poprzez Ujednolicone Identyfikatory Zasobów\\(w skrócie URI). Termin ten został stworzony przez Roya Fieldinga w 2000 roku. Dostęp uzyskiwany jest poprzez proste i jasno zdefiniowane operacje.  Istnieje pięć obowiązkowych ograniczeń, które dokładnie definiują charakter tego podejścia:
 \begin{itemize}
 	\item bezstanowość - każde zapytanie do serwera powinno zawierać wszystkie informacje potrzebne do jego zrozumienia.
 	\item użycie buforownia podręcznego - jeżeli dane są lokalnie przechowywane, należy\\o tym bezpośrednio poinformować.
-	\item system warstwowy - istnieje możliwość użycia wielu komponentów do poszczególnych funkcjolności, które razem stanowią jedno API. Klient przeważnie nie jest w stanie określić, czy jego połączenie jest realizowane z serwerem końcowym czy którymś\\z pośredników.
+	\item system warstwowy - istnieje możliwość użycia wielu komponentów do poszczególnych funkcjonalności, które razem stanowią jedno API. Klient przeważnie nie jest w stanie określić, czy jego połączenie jest realizowane z serwerem końcowym czy którymś\\z pośredników.
 	\item rozdział klienta od serwera - obie części powinno się być w stanie rozwijać osobno\\i niezależnie. Klient powinien jedynie znać URI, które może odpytywać.
 	\item ujednolicony interfejs - należy deterministycznie zdefiniować i nie zmieniać adresów pod którymi dostępne będą zasoby. 
 \end{itemize}~\cite{fielding}
@@ -94,7 +94,7 @@ jest Allegro REST API udostępnione przez Allegro.pl, czyli platformę transakcy
 \section{Baza danych}
 Warstwa persystencyjna jako osobny i niezależny serwis ma zadanie przetrzymywać dane użytkowników aplikacji. Jest to ogromnie ważny element systemu, którego działanie niezbędne jest na przykład dla Auth service (2.2). Wykorzystuje on go ze względu na posiadane informacje, które używane są w celu autoryzacji i autentykacji.
 Oprócz danych dostępowych, dla każdego klienta przechowywane są również zbiory książek - posiadanych i poszukiwanych.\newline
-Istniejące aktualnie, złożone bazy danych można podzielić ze wględu na struktury organizacji danych jakie stosują do ich przechowywania. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL).
+Istniejące aktualnie, złożone bazy danych można podzielić ze względu na struktury organizacji danych jakie stosują do ich przechowywania. Są to kolejno relacyjne, obiektowe, relacyjno-obiektowe, strumieniowe, temporalne, nierelacyjne (NoSQL).
 
 \subsection{Bazy relacyjne}
 Najczęściej spotykane są nadal bazy relacyjne, gdzie dane występują pod postacią powiązanych wzajemnie ze sobą tabel. Stosują one wewnętrzne języki programowania(wykorzystujące zwykle język SQL), służące do wykonywania zaawansowanych operacji.

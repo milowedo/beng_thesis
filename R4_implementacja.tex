@@ -1,7 +1,7 @@
 \chapter{Implementacja}
 \label{cha:implementacja}
 
-Ze względu na to, że omawiana aplikacja składa się z autonomicznych elementów, znaczna część implementacji poszczególnych serwisów mogła odbywać się niezależnie od innych. Tworzone funkcjonalności testowane były przy pomocy narzędzia Postman, za pomocą którego można wysyłać dowolnie skonfigurowane zapytania HTTP na konkretne adresy URI. Kolejne, gotowe usługi były następnie integrowane w sytemie.
+Ze względu na to, że omawiana aplikacja składa się z autonomicznych elementów, znaczna część implementacji poszczególnych serwisów mogła odbywać się niezależnie od innych. Tworzone funkcjonalności testowane były przy pomocy narzędzia Postman, za pomocą którego można wysyłać dowolnie skonfigurowane zapytania HTTP na konkretne adresy URI. Kolejne, gotowe usługi były następnie integrowane w systemie.
 
 %---------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ Pozwala on dokumentować każdą, kolejną zmianę, która ma miejsce w odniesie
 W projekcie korzystano z hostingu na platformie GitHub.
 
 \subsection{Organizacja zadań}
-\textbf{Kanban} to metodologia, która może być użyta jako narzędzie do zarządania projektem podczas produkcji oprogramowania. Oryginalnie została wymyślona w celu optymalizacji produkcji w Japońskiej firmie Toyota.
+\textbf{Kanban} to metodologia, która może być użyta jako narzędzie do zarządzania projektem podczas produkcji oprogramowania. Oryginalnie została wymyślona w celu optymalizacji produkcji w Japońskiej firmie Toyota.
 
 \newpage
 Jej wykorzystanie w procesie rozwijania systemów informatycznych znacząco wzrasta ze względu na jej przewagę nad tradycyjnymi metodami. Objawia się ona w elastyczności, wydajności i zwiększonej produktywności. Sama nazwa oznacza w wolnym tłumaczeniu ``spis widoczny``.~\cite{kanban}
@@ -31,7 +31,7 @@ Korzystając z faktu, że w serwisie Github możliwe jest utworzenie takiej kanb
 %---------------------------------------------------------------------------
 \newpage
 \section{Wybór technologii}
-Językami programowania, które maja największy udział w projekcie są Javascript (2.2, 2.3, 2.7) oraz Java (2.4).\newline
+Językami programowania, które mają największy udział w projekcie są Javascript (2.2, 2.3, 2.7) oraz Java (2.4).\newline
 Za persystencję odpowiada chmurowa wersja bazy danych NoSQL (2.6.2) - MongoDB Cloud.
 
 \subsection{Express}
@@ -61,7 +61,7 @@ Na powyższej grafice widać, że Hook \textbf{useEffect} przyjmuje dwa argument
 %---------------------------------------------------------------------------
 
 \section{Wielowątkowe tworzenie ofert}
-Mając na uwadze fakt, że użytkownicy aplikacji mobilnej byliby najprawdopodobniej dużo mniej zadwoleni, jeżeli musieliby długo czekać na rezultat analizy ofert książek, zdecydowano się zwrócić szczególną uwagę na optymalizacje tego czasochłonnego procesu.
+Mając na uwadze fakt, że użytkownicy aplikacji mobilnej byliby najprawdopodobniej dużo mniej zadowoleni, jeżeli musieliby długo czekać na rezultat analizy ofert książek, zdecydowano się zwrócić szczególną uwagę na optymalizację tego czasochłonnego procesu.
 Serwis OffersFetcher (2.4) jest aplikacją napisaną w frameworku Spring Boot. Przyjmując zapytanie w postaci listy książek, zwraca przygotowane oferty bazując na aktualnych\\w czasie rzeczywistym aukcjach na platformie Allegro.pl\newline
 Dla każdej pozycji tworzone jest zadanie, które składa się następnie z podzadań. Wszystkie podzadania wykonywane są asynchronicznie i podzielone są w ten sposób, aby maksymalnie ograniczyć czas, w którym zasoby maszyny nie są wykorzystywane z powodu chociażby oczekiwania na odpowiedź z zewnętrznego serwisu Allegro.
 \begin{figure}[H]
@@ -87,7 +87,7 @@ Do integracji serwisu z aplikacją potrzebne jest pozyskanie tokenu dostępowego
 	\caption*{\centering Źródło: {https://developer.allegro.pl/}}
 \end{figure}
 
-Podejście w poniższej pracy zakłada zarejestrowanie jednego, wspólnego dla całego systemu, konta funkcjonalnego za pomocą którego każde zapytanie będzie autentykowane. Stwarza to niestety jedno ograniczenie. Mianowicie, ze względu na obowiązujący główny limit nakładany na Client ID  - po przekroczeniu liczby 9000 zapytań na minutę, aplikacja zwróci kod błędu 429 i zostanie zabklokowana na kolejne 60 sekund.\newline
+Podejście w poniższej pracy zakłada zarejestrowanie jednego, wspólnego dla całego systemu, konta funkcjonalnego za pomocą którego każde zapytanie będzie autentykowane. Stwarza to niestety jedno ograniczenie. Mianowicie, ze względu na obowiązujący główny limit nakładany na Client ID  - po przekroczeniu liczby 9000 zapytań na minutę, aplikacja zwróci kod błędu 429 i zostanie zablokowana na kolejne 60 sekund.\newline
 W fazie inicjalizacyjnej autoryzacji uzyskane zostaną dwa unikalne tokeny: 
 \begin{itemize}
 	\item dostępowy - ważny przez 12h
@@ -100,12 +100,12 @@ Zostaną one zachowane w pamięci, a każde kolejne zapytanie, w przypadku wyga�
 	\caption{\centering Kod odpowiedzialny za utrzymywanie ważnego tokena}
 	\caption*{\centering Źródło: {Opracowanie własne}}
 \end{figure}
-Powyższy kod prezentuje przebieg akcji, które mają miejsce za każdym razem, kiedy otrzymywane jest zapytanie do OffersService (2.4). Na początku sprawdzane jest, czy token jest zwyczajnie aktualny, następnie, w przypadku, gdy nie jest, pobierany jest token odświeżający. W zależności od tego, czy jest on ważny, wygaśnięty, czy może w ogóle nigdy nie został uzyskany, odpowiednia logika zostaje uruchomiona.
+Powyższy kod prezentuje przebieg akcji, które mają miejsce za każdym razem, kiedy otrzymywane jest zapytanie do OffersService (2.4). Na początku sprawdzane jest, czy token jest zwyczajnie aktualny, następnie, w przypadku, gdy nie jest, pobierany jest token odświeżający. W zależności od tego, czy jest on ważny, wygasły, czy może w ogóle nigdy nie został uzyskany, odpowiednia logika zostaje uruchomiona.
 
 %---------------------------------------------------------------------------
 \newpage
 \section{MongoDB Cloud}
-Modele przechowujące dane są zdefiniowane w klasach Book.js oraz User.js serwisów Gateway (2.3) i Auth Service (2.2). Połączenie do bazy danych jest obsłużone przy pomocy bilbioteki \textit{mongoose}.\newline
+Modele przechowujące dane są zdefiniowane w klasach Book.js oraz User.js serwisów Gateway (2.3) i Auth Service (2.2). Połączenie do bazy danych jest obsłużone przy pomocy biblioteki \textit{mongoose}.\newline
 W celu uzyskania dostępu potrzebny jest jedynie tak zwany \textit{connection string}, który uzyskany został poprzez zalogowanie się na stronie webowej serwisu hostującego cloud.mongodb.com i nawigację do zakładki Connect.
 \begin{figure}[H]
 	\centering
@@ -121,7 +121,7 @@ W załączonej grafice widać rozpoczęcie połączenia z bazą danych. Ważnym 
 
 Korzystanie ze stworzonych serwisów jest umożliwione poprzez wdrożenie ich na platformie chmurowej Heroku.
 W ten sposób każda usługa posiada własne URI, na które wysyłane są zapytania w zależności od potrzeb.
-Poszczególne aplikacje możnaby również uruchomić na pojedynczym komputerze, jednakże wymagałoby to sporej ilości zasobów, stąd zdecydowano się na rozwiązanie hostingowe.
+Poszczególne aplikacje można by również uruchomić na pojedynczym komputerze, jednakże wymagałoby to sporej ilości zasobów, stąd zdecydowano się na rozwiązanie hostingowe.
 
 \newpage
 Minimalne środowisko jakie jest wymagane aby uruchomić system to:
@@ -133,14 +133,14 @@ Minimalne środowisko jakie jest wymagane aby uruchomić system to:
 	\item Expo v3.11.1
 \end{itemize}
 
-Wdrożenie wymagało dodatkowo stworzenia aplikacji w sensie logicznym według platformy Heroku. Odbyło się to za pomocą lini komend Heroku CLI oraz poprzez wskazanie adresu URI do stosownych repozytoriów Github, gdzie przetrzymywany jest kod.
+Wdrożenie wymagało dodatkowo stworzenia aplikacji w sensie logicznym według platformy Heroku. Odbyło się to za pomocą linii komend Heroku CLI oraz poprzez wskazanie adresu URI do stosownych repozytoriów Github, gdzie przetrzymywany jest kod.
 W ten sposób w webowym interfejsie pod adresem dashboard.heroku.com znalazły się odnośniki reprezentujące trzy usługi : OffersFetcher (2.4), Auth Service (2.2) oraz Gateway (2.3).\newline Każda z nich ma zdefiniowaną odpowiednią konfigurację, dzięki której aplikacje mogą zostać uruchomione.
 \begin{itemize}
 	\item {OffersFetcher (2.4) uruchamiany jest na platformie poleceniem \textit{web java -jar build/libs/*.jar}}
 	\item {AuthService (2.2) oraz Gateway (2.3) - komendą \textit{npm start}}
 \end{itemize}
 
-Serwis reprezentujący bazę danych nie potrzebował bezpośredniego wdrożenia w postaci umieszczenia w konkretnym miejscu, napisanego wcześniej kodu. Cały proces uruchomienia bazy danych został wykonany za pomocą webowego intefejsu.
+Serwis reprezentujący bazę danych nie potrzebował bezpośredniego wdrożenia w postaci umieszczenia w konkretnym miejscu, napisanego wcześniej kodu. Cały proces uruchomienia bazy danych został wykonany za pomocą webowego interfejsu.
 
 Aby uruchomić lokalnie aplikację mobilną należy w folderze ją zawierającym wykonać polecenie \textit{expo r}. Następnie w zainstalowanej na urządzeniu mobilnym aplikacji ``Expo`` w zakładce Projects pojawi się instancja aplikacji.
 
